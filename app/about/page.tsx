@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+import { AboutPageContent } from "@/components/about/AboutPageContent";
+
+export const metadata: Metadata = {
+  title: "About | Jnana Diksuchika",
+  description:
+    "Philosophical manifesto, origin story, and operating tenets of Jnana Diksuchika.",
+};
+
 export default function AboutPage() {
-  return <h1 className="p-8 text-3xl font-semibold">About</h1>;
+  return <AboutPageContent />;
 }
