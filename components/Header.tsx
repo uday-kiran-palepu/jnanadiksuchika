@@ -102,6 +102,28 @@ export default function Header() {
           </div>
         </div>
       </div>
+      <nav
+        className="xl:hidden border-t border-surface-container-high/80 overflow-x-auto flex gap-space-xs px-margin-mobile py-space-sm bg-surface-container-lowest/90"
+        aria-label="Main mobile"
+      >
+        {navItems.map((item) => {
+          const active = isActive(pathname, item.href);
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              aria-current={active ? "page" : undefined}
+              className={`px-space-md py-space-xs whitespace-nowrap rounded-lg text-label-md font-label-md ${
+                active
+                  ? "bg-primary-container text-on-primary-container"
+                  : "text-on-surface-variant"
+              }`}
+            >
+              {item.label}
+            </Link>
+          );
+        })}
+      </nav>
     </header>
   );
 }

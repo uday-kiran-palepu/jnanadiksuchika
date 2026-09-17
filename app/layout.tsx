@@ -39,7 +39,9 @@ export default function RootLayout({
         className={`${inter.variable} ${plusJakarta.variable} bg-background font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed`}
       >
         <Header />
-        <main className="w-full pt-20 bg-background min-h-screen">{children}</main>
+        <main className="w-full pt-28 xl:pt-20 bg-background min-h-screen">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
