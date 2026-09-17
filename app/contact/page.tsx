@@ -1,3 +1,12 @@
-export default function ContactPage() {
-  return <h1 className="p-8 text-3xl font-semibold">Contact</h1>;
+import type { Metadata } from "next";
+import { ContactPage } from "@/components/contact/ContactPage";
+
+export const metadata: Metadata = {
+  title: "Contact & Regional Nodes | Jnana Diksuchika",
+  description:
+    "Reach faculty and engineering mentors in Kakinada AP and nationwide. Sub-4hr SLA, bilingual support, zero spam.",
+};
+
+export default function Page() {
+  return <ContactPage />;
 }
