@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Jnana Diksuchika",
-  description: "Jnana Diksuchika",
+  description:
+    "Knowledge that gives you direction. Real engineering depth, distributed systems, and career trajectory.",
 };
 
 export default function RootLayout({
@@ -27,11 +29,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+          rel="stylesheet"
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased text-gray-900`}
+        className={`${inter.variable} ${plusJakarta.variable} bg-background font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed`}
       >
         <Header />
-        <main>{children}</main>
+        <main className="w-full pt-20 bg-background min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

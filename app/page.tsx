@@ -1,3 +1,5 @@
+import { HomePageContent } from "@/components/home/HomePageContent";
+
 export default function HomePage() {
-  return <h1 className="p-8 text-3xl font-semibold">Home</h1>;
+  return <HomePageContent />;
 }
