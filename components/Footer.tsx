@@ -237,7 +237,7 @@ export default function Footer() {
               </Link>
               <Link
                 className="hover:text-surface-bright transition-colors"
-                href="/contact"
+                href="/terms"
               >
                 Terms of Service
               </Link>

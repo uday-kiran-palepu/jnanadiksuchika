@@ -113,6 +113,19 @@ const config: Config = {
         "title-md": ["var(--font-inter)", "Inter", "sans-serif"],
         "label-sm": ["var(--font-inter)", "Inter", "sans-serif"],
       },
+      keyframes: {
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+      },
+      animation: {
+        shimmer: "shimmer 1.5s ease-in-out infinite",
+      },
+      backgroundImage: {
+        shimmer:
+          "linear-gradient(90deg, rgba(218,226,253,0.4) 0%, rgba(255,255,255,0.9) 50%, rgba(218,226,253,0.4) 100%)",
+      },
       fontSize: {
         "display-hero": [
           "56px",
