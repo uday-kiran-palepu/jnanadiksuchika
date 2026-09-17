@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { pick, useLocale } from "@/lib/i18n/LanguageProvider";
 import {
   kbArticles,
   kbCategoryFilters,
@@ -9,6 +10,7 @@ import {
 } from "./data";
 
 export function KnowledgeBaseCatalog() {
+  const { locale } = useLocale();
   const [category, setCategory] = useState<KbCategoryId>("all");
   const [query, setQuery] = useState("");
   const [listView, setListView] = useState(false);
@@ -66,10 +68,14 @@ export function KnowledgeBaseCatalog() {
         <div className="max-w-[1320px] mx-auto flex flex-col gap-space-lg relative z-10">
           <div className="flex flex-col gap-space-sm">
             <span className="font-label-sm text-label-sm font-semibold tracking-wider uppercase text-primary px-space-sm py-space-xs rounded bg-surface-container-highest w-fit">
-              జ్ఞాన దిక్సూచిక • ARCHITECTURAL REPOSITORY
+              {pick(locale, "ARCHITECTURAL REPOSITORY", "జ్ఞాన దిక్సూచిక")}
             </span>
             <h1 className="font-display-hero text-display-hero text-on-surface tracking-tight leading-none max-w-4xl">
-              Knowledge Base &amp; Career Engineering Library
+              {pick(
+                locale,
+                "Knowledge Base & Career Engineering Library",
+                "నాలెడ్జ్ బేస్ & కెరీర్ ఇంజనీరింగ్ లైబ్రరీ"
+              )}
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
               Procedural how-tos, platform guides, exam roadmaps, and distributed systems curriculum notes — open,
@@ -185,9 +191,8 @@ export function KnowledgeBaseCatalog() {
                     </div>
                     <span className="font-caption text-caption uppercase text-secondary font-semibold">{article.topic}</span>
                     <h3 className="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
-                      {article.title}
+                      {pick(locale, article.title, article.titleTe)}
                     </h3>
-                    <span className="font-body-sm text-body-sm text-on-surface-variant">{article.titleTe}</span>
                     <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">{article.excerpt}</p>
                   </div>
                   <div className="pt-space-md flex items-center justify-between">

@@ -372,7 +372,7 @@ export default function TeamPage() {
                   </span>
                   <a
                     className="text-primary hover:text-primary-container font-semibold inline-flex items-center gap-0.5"
-                    href="#"
+                    href="/contact"
                   >
                     Profile{" "}
                     <span className="material-symbols-outlined text-[14px]">

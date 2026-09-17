@@ -23,7 +23,7 @@ export function FinalCtaSection() {
           <div className="flex flex-col sm:flex-row items-center gap-space-md shrink-0 w-full lg:w-auto">
             <a
               className="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-space-md rounded-lg bg-secondary-container text-on-tertiary font-title-lg text-title-lg shadow-lg hover:bg-secondary hover:text-on-secondary transition-all hover:-translate-y-0.5 font-bold"
-              href="#workshops-section"
+              href="/workshops"
             >
               <span>Get Started with Cohort 04</span>
               <span className="material-symbols-outlined text-[20px]">

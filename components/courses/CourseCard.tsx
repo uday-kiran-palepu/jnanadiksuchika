@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { pick, useLocale } from "@/lib/i18n/LanguageProvider";
 import type { CatalogCourse } from "./data";
 
 export function CourseCard({ course }: { course: CatalogCourse }) {
+  const { locale } = useLocale();
   return (
     <article
       className="course-card flex flex-col bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group"
@@ -25,10 +29,7 @@ export function CourseCard({ course }: { course: CatalogCourse }) {
         </span>
         <div className="absolute bottom-space-sm left-space-sm right-space-sm text-on-primary">
           <span className="font-caption text-caption opacity-80 uppercase tracking-wider block">
-            {course.teluguTitle}
-          </span>
-          <span className="font-label-sm text-label-sm text-secondary-fixed-dim font-semibold">
-            {course.subtitle}
+            {pick(locale, course.subtitle, course.teluguTitle)}
           </span>
         </div>
       </div>

@@ -231,7 +231,7 @@ export default function Footer() {
             <div className="flex flex-wrap gap-x-space-md gap-y-space-xs pt-space-sm font-label-md text-label-md text-surface-dim/80">
               <Link
                 className="hover:text-surface-bright transition-colors"
-                href="/contact"
+                href="/privacy"
               >
                 Privacy Policy
               </Link>
@@ -243,7 +243,7 @@ export default function Footer() {
               </Link>
               <Link
                 className="hover:text-surface-bright transition-colors"
-                href="/contact"
+                href="/terms#sec-07"
               >
                 Cookie Settings
               </Link>

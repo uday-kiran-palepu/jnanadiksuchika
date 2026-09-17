@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import CompassAnimation from "@/components/CompassAnimation";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { BRAND_LOGO_SRC, ImagePlaceholder } from "@/components/ImagePlaceholder";
+import { pick, useLocale } from "@/lib/i18n/LanguageProvider";
 
 export function HeroSection() {
+  const { locale } = useLocale();
   return (
     <section className="relative w-full overflow-hidden bg-gradient-to-b from-surface via-surface-container-low/50 to-surface py-space-xl">
       <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none" />
@@ -19,7 +23,7 @@ export function HeroSection() {
                 /
               </span>
               <span className="font-label-sm text-label-sm text-tertiary font-medium">
-                తెలుగు • English Dual-Script
+                {pick(locale, "English", "తెలుగు")}
               </span>
             </div>
 
@@ -27,26 +31,27 @@ export function HeroSection() {
               <div className="flex items-center gap-space-sm">
                 {/* TODO: replace with real emblem */}
                 <ImagePlaceholder
-                  className="h-10 w-10 rounded object-contain"
+                  className="h-10 w-10 rounded"
                   alt="Jnana Diksuchika Emblem"
+                  src={BRAND_LOGO_SRC}
                 />
                 <h1 className="font-display-hero text-display-hero-mobile sm:text-display-hero text-on-surface tracking-tight leading-none">
-                  JNANA DIKSUCHIKA
+                  {pick(locale, "JNANA DIKSUCHIKA", "జ్ఞాన దిక్సూచిక")}
                 </h1>
               </div>
               <div className="flex items-baseline gap-space-sm mt-space-xs">
                 <span className="font-headline-md text-headline-md text-primary font-bold tracking-normal">
-                  జ్ఞాన దిక్సూచిక
-                </span>
-                <span className="font-body-md text-body-md text-on-surface-variant font-medium tracking-wide">
-                  · Compass of Knowledge
+                  {pick(locale, "Compass of Knowledge", "జ్ఞాన దిక్సూచిక")}
                 </span>
               </div>
             </div>
 
             <p className="font-headline-sm text-headline-sm text-on-surface font-semibold max-w-xl">
-              Knowledge that gives you direction. Real engineering depth,
-              distributed systems, and career trajectory.
+              {pick(
+                locale,
+                "Knowledge that gives you direction. Real engineering depth, distributed systems, and career trajectory.",
+                "మీకు దిశానిర్దేశం ఇచ్చే జ్ఞానం. నిజమైన ఇంజనీరింగ్ లోతు, డిస్ట్రిబ్యూటెడ్ సిస్టమ్స్ మరియు కెరీర్ మార్గం."
+              )}
             </p>
 
             <div className="flex flex-wrap items-center gap-space-sm pt-space-xs">
@@ -80,15 +85,15 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-wrap items-center gap-space-md pt-space-sm">
-              <a
+              <Link
                 className="inline-flex items-center justify-center gap-space-xs px-space-xl py-space-md rounded-lg bg-secondary-container text-on-tertiary font-title-lg text-title-lg shadow-lg hover:bg-secondary hover:text-on-secondary transition-all hover:-translate-y-0.5"
-                href="#workshops-section"
+                href="/workshops"
               >
-                <span>Explore Flagship Batches</span>
+                <span>{pick(locale, "Explore Flagship Batches", "ప్రధాన బ్యాచ్‌లను అన్వేషించండి")}</span>
                 <span className="material-symbols-outlined text-[20px]">
                   arrow_forward
                 </span>
-              </a>
+              </Link>
               <Link
                 className="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-lg bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors font-title-md text-title-md"
                 href="/knowledge-base"

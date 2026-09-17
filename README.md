@@ -30,6 +30,18 @@ npm run build
 npm start
 ```
 
+## Deploy on Vercel
+
+1. Push this repository to GitHub.
+2. In [Vercel](https://vercel.com), import the repo (framework preset: **Next.js**).
+3. Build command: `npm run build` (default). Output: Next.js default.
+4. No environment variables are required for the current static/client-side features.
+5. After deploy, set your production domain in Vercel; all routes under `app/` are included.
+
+## Language toggle
+
+The header **EN / తె** switch stores preference in `localStorage` and shows either English or Telugu copy on key surfaces (navigation, hero, courses, knowledge base, tools). Expand translations in `lib/i18n/LanguageProvider.tsx` and page components using `pick(locale, en, te)`.
+
 ## App structure
 
 Routes live under `app/` (not `src/app`). Shared `Header` and `Footer` are rendered from the root `layout.tsx`.

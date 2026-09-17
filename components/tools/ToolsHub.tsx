@@ -6,6 +6,7 @@ import { useMemo, useState } from "react";
 import { categoryFilters, hubTools, type ToolCategoryId } from "./data";
 import { RaftClusterMiniSvg } from "./RaftClusterMiniSvg";
 
+import { pick, useLocale } from "@/lib/i18n/LanguageProvider";
 import { RAFT_VISUALIZER_SLUG } from "./data";
 
 const activePill =
@@ -25,6 +26,7 @@ const toolSearchBlob: Record<string, string> = {
 };
 
 export function ToolsHub() {
+  const { locale } = useLocale();
   const [filter, setFilter] = useState<ToolCategoryId>("all");
   const [search, setSearch] = useState("");
 
@@ -90,7 +92,7 @@ export function ToolsHub() {
                 Bare-Metal Diagnostics
               </span>
               <span className="font-caption text-caption text-secondary font-bold tracking-widest uppercase">
-                జ్ఞాన దిక్సూచిక • BENCHMARK SUITE
+                {pick(locale, "BENCHMARK SUITE", "జ్ఞాన దిక్సూచిక")}
               </span>
             </div>
             <h1 className="font-display-hero text-display-hero text-on-surface tracking-tight max-w-4xl">
@@ -105,6 +107,29 @@ export function ToolsHub() {
             </p>
           </div>
           <TrustStrip />
+          <Link
+            href="/tools/system-states"
+            className="mt-space-md flex flex-wrap items-center justify-between gap-space-sm p-space-md rounded-xl bg-surface-container-lowest border border-primary-fixed/40 shadow-sm hover:shadow-md hover:border-primary transition-all group"
+          >
+            <div className="flex items-center gap-space-sm">
+              <span className="material-symbols-outlined text-primary text-[28px]">explore</span>
+              <div>
+                <span className="font-title-md text-title-md text-on-surface font-semibold block">
+                  {pick(
+                    locale,
+                    "System States, Error Resiliency & Fallback Archetypes",
+                    "సిస్టమ్ స్థితులు & ఫాల్‌బ్యాక్ ఆర్కిటైప్‌లు"
+                  )}
+                </span>
+                <span className="font-body-sm text-body-sm text-on-surface-variant">
+                  {pick(locale, "404, empty states, skeletons, form failover — RFC spec", "404, ఖాళీ స్థితులు, స్కెలిటన్ లోడింగ్")}
+                </span>
+              </div>
+            </div>
+            <span className="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">
+              arrow_forward
+            </span>
+          </Link>
           <div className="pt-space-xl flex items-center justify-between gap-space-md flex-wrap">
             <div
               className="flex items-center gap-space-xs flex-wrap p-space-xs rounded-xl bg-surface-container-low shadow-sm"

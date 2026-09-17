@@ -375,7 +375,9 @@ export default function WorkshopsPage() {
               <div className="p-space-md pt-0">
                 <a
                   className="inline-flex items-center gap-space-xs text-primary font-title-md text-title-md hover:text-primary-container font-semibold"
-                  href="#"
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <span>Watch Teardown Highlight (YouTube)</span>
                   <span className="material-symbols-outlined text-[18px]">
@@ -417,7 +419,7 @@ export default function WorkshopsPage() {
               <div className="p-space-md pt-0">
                 <a
                   className="inline-flex items-center gap-space-xs text-primary font-title-md text-title-md hover:text-primary-container font-semibold"
-                  href="#"
+                  href="/knowledge-base"
                 >
                   <span>View Photo Telemetry &amp; Lab Notes</span>
                   <span className="material-symbols-outlined text-[18px]">
@@ -467,7 +469,9 @@ export default function WorkshopsPage() {
               <div className="p-space-md pt-0">
                 <a
                   className="inline-flex items-center gap-space-xs text-primary font-title-md text-title-md hover:text-primary-container font-semibold"
-                  href="#"
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <span>Inspect Public GitHub Archive</span>
                   <span className="material-symbols-outlined text-[18px]">code</span>
