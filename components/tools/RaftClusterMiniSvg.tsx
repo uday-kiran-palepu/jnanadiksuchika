@@ -1,0 +1,127 @@
+export function RaftClusterMiniSvg() {
+  return (
+    <svg className="w-full max-h-36 text-primary" viewBox="0 0 260 140">
+      <line
+        className="opacity-40"
+        stroke="currentColor"
+        strokeDasharray="3,3"
+        strokeWidth="2"
+        x1="50"
+        x2="130"
+        y1="40"
+        y2="25"
+      />
+      <line
+        className="opacity-40"
+        stroke="currentColor"
+        strokeDasharray="3,3"
+        strokeWidth="2"
+        x1="130"
+        x2="210"
+        y1="25"
+        y2="40"
+      />
+      <line
+        className="opacity-30"
+        stroke="currentColor"
+        strokeWidth="2"
+        x1="50"
+        x2="80"
+        y1="40"
+        y2="105"
+      />
+      <line
+        className="opacity-30"
+        stroke="currentColor"
+        strokeWidth="2"
+        x1="210"
+        x2="180"
+        y1="40"
+        y2="105"
+      />
+      <line
+        className="opacity-80 animate-pulse"
+        stroke="#ba1a1a"
+        strokeDasharray="4,4"
+        strokeWidth="2.5"
+        x1="80"
+        x2="180"
+        y1="105"
+        y2="105"
+      />
+      <text fill="#ba1a1a" fontSize="16" fontWeight="bold" x="122" y="112">
+        ✕
+      </text>
+      <circle cx="50" cy="40" fill="#00609b" r="16" />
+      <text
+        fill="#ffffff"
+        fontFamily="Inter"
+        fontSize="10"
+        fontWeight="bold"
+        textAnchor="middle"
+        x="50"
+        y="44"
+      >
+        N1
+      </text>
+      <circle cx="130" cy="25" fill="#fc8b33" r="20" />
+      <circle
+        className="animate-spin"
+        cx="130"
+        cy="25"
+        fill="none"
+        r="26"
+        stroke="#fc8b33"
+        strokeDasharray="4,2"
+        strokeWidth="1.5"
+      />
+      <text
+        fill="#ffffff"
+        fontFamily="Inter"
+        fontSize="10"
+        fontWeight="800"
+        textAnchor="middle"
+        x="130"
+        y="28"
+      >
+        LEAD
+      </text>
+      <circle cx="210" cy="40" fill="#00609b" r="16" />
+      <text
+        fill="#ffffff"
+        fontFamily="Inter"
+        fontSize="10"
+        fontWeight="bold"
+        textAnchor="middle"
+        x="210"
+        y="44"
+      >
+        N3
+      </text>
+      <circle cx="80" cy="105" fill="#465d7b" r="16" />
+      <text
+        fill="#ffffff"
+        fontFamily="Inter"
+        fontSize="10"
+        fontWeight="bold"
+        textAnchor="middle"
+        x="80"
+        y="109"
+      >
+        N4
+      </text>
+      <circle cx="180" cy="105" fill="#ba1a1a" r="16" />
+      <text
+        fill="#ffffff"
+        fontFamily="Inter"
+        fontSize="9"
+        fontWeight="bold"
+        textAnchor="middle"
+        x="180"
+        y="109"
+      >
+        CAND
+      </text>
+    </svg>
+  );
+}
