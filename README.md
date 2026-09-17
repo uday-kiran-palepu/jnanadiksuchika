@@ -30,6 +30,28 @@ npm run build
 npm start
 ```
 
+## Push to GitHub (`JnanaDiksuchika`)
+
+This project is named **JnanaDiksuchika** on GitHub: `uday-kiran-palepu/JnanaDiksuchika`.
+
+**On Windows**, use **WSL** (GitHub CLI does not run in PowerShell):
+
+```bash
+# Install GitHub CLI if needed: https://cli.github.com/
+gh auth login
+
+cd /path/to/JnanaDiksuchika   # your clone (e.g. from origin repo clone)
+chmod +x scripts/push-to-github.sh
+./scripts/push-to-github.sh
+```
+
+Or create the empty repo on [github.com/new](https://github.com/new) (name: `JnanaDiksuchika`), then:
+
+```bash
+git remote add github https://github.com/uday-kiran-palepu/JnanaDiksuchika.git
+git push -u github main
+```
+
 ## Deploy on Vercel
 
 1. Push this repository to GitHub.
