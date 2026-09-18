@@ -67,7 +67,7 @@ export function ContactPage() {
         <div className="max-w-[1320px] mx-auto flex flex-col gap-space-lg">
           <div className="flex flex-col gap-space-xs max-w-4xl">
             <div className="inline-flex flex-wrap items-center gap-2 text-primary font-caption text-caption font-bold tracking-widest uppercase">
-              <span className="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed">జ్ఞాన దిక్సూచిక</span>
+              <span className="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed">Big Switch</span>
               <span>• Direct Communication &amp; Inquiries</span>
             </div>
             <h1 className="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-space-xs">
@@ -260,7 +260,7 @@ export function ContactPage() {
                       Transmission timed out or failed to reach edge gateway.
                     </span>
                     <p className="font-body-sm text-body-sm mt-0.5 leading-relaxed">
-                      Connection to <span className="font-semibold">api.jnanadiksuchika.org</span> encountered an
+                      Connection to <span className="font-semibold">api.bigswitch.dev</span> encountered an
                       upstream handshake timeout.
                     </p>
                   </div>
@@ -273,7 +273,7 @@ export function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
                     <div className="p-space-sm rounded-lg bg-surface-container-lowest shadow-xs flex flex-col">
                       <span className="font-caption text-caption text-outline uppercase font-semibold">Direct Telegram</span>
-                      <span className="font-title-md text-title-md text-primary font-semibold">@JnanaDiksuchikaOps</span>
+                      <span className="font-title-md text-title-md text-primary font-semibold">@BigSwitchOps</span>
                     </div>
                     <div className="p-space-sm rounded-lg bg-surface-container-lowest shadow-xs flex flex-col">
                       <span className="font-caption text-caption text-outline uppercase font-semibold">WhatsApp Desk</span>
@@ -281,8 +281,8 @@ export function ContactPage() {
                     </div>
                     <div className="p-space-sm rounded-lg bg-surface-container-lowest shadow-xs flex flex-col">
                       <span className="font-caption text-caption text-outline uppercase font-semibold">Faculty PGP Email</span>
-                      <a className="font-title-md text-title-md text-primary font-semibold" href="mailto:ops@jnanadiksuchika.org">
-                        ops@jnanadiksuchika.org
+                      <a className="font-title-md text-title-md text-primary font-semibold" href="mailto:ops@bigswitch.dev">
+                        ops@bigswitch.dev
                       </a>
                     </div>
                   </div>
@@ -368,7 +368,7 @@ export function ContactPage() {
               <div className="p-space-md rounded-lg bg-surface-container-low flex items-start gap-space-sm">
                 <span className="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">pin_drop</span>
                 <div className="flex flex-col font-body-sm text-body-sm text-on-surface">
-                  <span className="font-semibold">Jnana Diksuchika Foundation</span>
+                  <span className="font-semibold">Big Switch Foundation</span>
                   <span className="text-on-surface-variant">2nd Floor, Knowledge Corridors, Bhanugudi Junction,</span>
                   <span className="text-on-surface-variant">Kakinada, Andhra Pradesh 533003, India.</span>
                 </div>
@@ -379,14 +379,14 @@ export function ContactPage() {
               <span className="font-title-lg text-title-lg text-on-surface font-bold">Direct Channels</span>
               <div className="flex flex-col gap-space-sm font-body-sm text-body-sm">
                 <div className="p-space-sm rounded-lg bg-surface-container-low flex justify-between gap-space-sm">
-                  <a className="font-semibold text-on-surface hover:text-primary" href="mailto:ops@jnanadiksuchika.org">
-                    ops@jnanadiksuchika.org
+                  <a className="font-semibold text-on-surface hover:text-primary" href="mailto:ops@bigswitch.dev">
+                    ops@bigswitch.dev
                   </a>
                   <span className="font-caption text-caption text-primary font-semibold">&lt; 4h SLA</span>
                 </div>
                 <div className="p-space-sm rounded-lg bg-surface-container-low flex justify-between gap-space-sm">
-                  <a className="font-semibold text-on-surface hover:text-secondary" href="mailto:partnerships@jnanadiksuchika.org">
-                    partnerships@jnanadiksuchika.org
+                  <a className="font-semibold text-on-surface hover:text-secondary" href="mailto:partnerships@bigswitch.dev">
+                    partnerships@bigswitch.dev
                   </a>
                   <span className="font-caption text-caption text-on-surface-variant">MOU Desk</span>
                 </div>

@@ -1,33 +1,36 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { DM_Sans, Plus_Jakarta_Sans } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { LanguageProvider } from "@/lib/i18n/LanguageProvider";
+import { buildMetadata, organizationJsonLd, websiteJsonLd } from "@/lib/seo/metadata";
 import "./globals.css";
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans",
   display: "swap",
 });
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-plus-jakarta",
+  variable: "--font-display",
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Jnana Diksuchika",
-  description:
-    "Knowledge that gives you direction. Real engineering depth, distributed systems, and career trajectory.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Big Switch",
+  path: "/",
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const org = organizationJsonLd();
+  const web = websiteJsonLd();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -35,13 +38,21 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
           rel="stylesheet"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(web) }}
+        />
       </head>
       <body
-        className={`${inter.variable} ${plusJakarta.variable} bg-background font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed`}
+        className={`${dmSans.variable} ${plusJakarta.variable} font-sans-bs bg-background text-on-surface antialiased`}
       >
         <LanguageProvider>
           <Header />
-          <main className="w-full pt-20 bg-background min-h-screen">{children}</main>
+          <main className="w-full pt-20 min-h-screen">{children}</main>
           <Footer />
         </LanguageProvider>
       </body>

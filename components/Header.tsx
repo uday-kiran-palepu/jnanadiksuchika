@@ -3,147 +3,198 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { ChevronDown, Menu, X, BookOpen, Wrench, Library } from "lucide-react";
 import { BRAND_LOGO_SRC } from "@/components/ImagePlaceholder";
-import { pick, useLocale } from "@/lib/i18n/LanguageProvider";
-
-const navItems = [
-  { href: "/", labelEn: "Home", labelTe: "హోమ్" },
-  { href: "/about", labelEn: "About", labelTe: "గురించి" },
-  { href: "/team", labelEn: "Team", labelTe: "బృందం" },
-  { href: "/workshops", labelEn: "Workshops", labelTe: "వర్క్‌షాప్‌లు" },
-  { href: "/courses", labelEn: "Courses", labelTe: "కోర్సులు" },
-  { href: "/tools", labelEn: "Tools", labelTe: "సాధనాలు" },
-  { href: "/knowledge-base", labelEn: "Knowledge Base", labelTe: "నాలెడ్జ్ బేస్" },
-  { href: "/contact", labelEn: "Contact", labelTe: "సంప్రదించండి" },
-] as const;
+import { useLocale } from "@/lib/i18n/LanguageProvider";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-function NavLink({
-  href,
-  labelEn,
-  labelTe,
-  active,
-  onNavigate,
-  compact,
-}: {
-  href: string;
-  labelEn: string;
-  labelTe: string;
-  active: boolean;
-  onNavigate?: () => void;
-  compact?: boolean;
-}) {
-  const { locale } = useLocale();
-  const label = pick(locale, labelEn, labelTe);
-  return (
-    <Link
-      href={href}
-      onClick={onNavigate}
-      aria-current={active ? "page" : undefined}
-      className={`transition-all rounded-lg whitespace-nowrap ${
-        compact
-          ? "px-space-md py-space-sm font-title-md text-title-md"
-          : "px-2 lg:px-space-sm xl:px-space-md py-space-sm font-title-md text-[13px] lg:text-title-md"
-      } ${
-        active
-          ? "bg-primary-container text-on-primary-container shadow-sm"
-          : "text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface"
-      }`}
-    >
-      {label}
-    </Link>
-  );
-}
-
 export default function Header() {
   const pathname = usePathname();
-  const { locale, setLocale } = useLocale();
+  const { locale, setLocale, t } = useLocale();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [learningOpen, setLearningOpen] = useState(false);
+  const learningRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMenuOpen(false);
+    setLearningOpen(false);
   }, [pathname]);
 
-  const tagline = pick(
-    locale,
-    "Compass of Knowledge",
-    "జ్ఞాన దిక్సూచిక"
-  );
+  useEffect(() => {
+    function onDoc(e: MouseEvent) {
+      if (
+        learningRef.current &&
+        !learningRef.current.contains(e.target as Node)
+      ) {
+        setLearningOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", onDoc);
+    return () => document.removeEventListener("mousedown", onDoc);
+  }, []);
+
+  const learningActive =
+    isActive(pathname, "/courses") ||
+    isActive(pathname, "/tools") ||
+    isActive(pathname, "/knowledge-base");
+
+  const linkClass = (active: boolean) =>
+    `px-3 py-2 rounded-lg text-sm font-semibold transition-colors whitespace-nowrap ${
+      active
+        ? "bg-[var(--bs-accent-soft)] text-[var(--bs-accent)]"
+        : "text-[var(--bs-muted)] hover:text-[var(--bs-ink)] hover:bg-[var(--bs-surface-2)]"
+    }`;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/85 backdrop-blur-md shadow-[0_1px_8px_rgba(0,96,155,0.08)]">
-      <div className="h-20 max-w-[1320px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-2 lg:gap-gutter">
-        <Link
-          href="/"
-          className="flex items-center gap-space-sm flex-shrink-0 min-w-0"
-        >
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--bs-border)]/70 bg-[var(--bs-surface-0)]/85 backdrop-blur-xl">
+      <div className="h-20 max-w-[1320px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-3">
+        <Link href="/" className="flex items-center gap-2.5 min-w-0 shrink-0">
           <Image
             src={BRAND_LOGO_SRC}
-            alt="Jnana Diksuchika Brand Logo"
-            width={32}
-            height={32}
-            className="h-8 w-8 rounded object-contain shrink-0"
+            alt="Big Switch logo"
+            width={36}
+            height={36}
+            className="h-9 w-9 rounded-lg object-contain"
+            priority
           />
           <div className="flex flex-col min-w-0">
-            <span className="font-headline-sm text-headline-sm text-primary tracking-tight truncate">
-              Jnana Diksuchika
+            <span className="font-display text-lg font-bold tracking-tight text-[var(--bs-ink)] truncate">
+              {t("brand.name")}
             </span>
-            <span className="font-caption text-caption uppercase text-on-surface-variant tracking-wider hidden sm:block truncate">
-              {tagline}
+            <span className="text-[10px] uppercase tracking-[0.14em] text-[var(--bs-muted)] hidden sm:block truncate">
+              {t("brand.shortTagline")}
             </span>
           </div>
         </Link>
 
         <nav
-          className="hidden lg:flex items-center gap-0.5 xl:gap-space-xs p-1 xl:p-space-xs bg-surface-container-low/70 rounded-xl flex-1 justify-center max-w-3xl mx-2"
+          className="hidden lg:flex items-center gap-0.5 flex-1 justify-center"
           aria-label="Main"
         >
-          {navItems.map((item) => (
-            <NavLink
-              key={item.href}
-              href={item.href}
-              labelEn={item.labelEn}
-              labelTe={item.labelTe}
-              active={isActive(pathname, item.href)}
-            />
-          ))}
+          <div className="relative" ref={learningRef}>
+            <button
+              type="button"
+              className={`${linkClass(learningActive)} inline-flex items-center gap-1`}
+              aria-expanded={learningOpen}
+              aria-haspopup="true"
+              onClick={() => setLearningOpen((o) => !o)}
+            >
+              {t("nav.learning")}
+              <ChevronDown
+                className={`h-4 w-4 transition-transform ${learningOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+            {learningOpen && (
+              <div
+                className="absolute left-0 top-full mt-2 w-[340px] rounded-2xl border border-[var(--bs-border)] bg-[var(--bs-surface-0)] p-2 shadow-[0_24px_60px_-24px_rgba(15,23,42,0.45)]"
+                role="menu"
+              >
+                <Link
+                  href="/courses"
+                  role="menuitem"
+                  className="flex gap-3 rounded-xl p-3 hover:bg-[var(--bs-surface-1)]"
+                  onClick={() => setLearningOpen(false)}
+                >
+                  <BookOpen className="h-5 w-5 text-[var(--bs-accent)] shrink-0 mt-0.5" />
+                  <span>
+                    <span className="block text-sm font-semibold text-[var(--bs-ink)]">
+                      {t("nav.courses")}
+                    </span>
+                    <span className="block text-xs text-[var(--bs-muted)] mt-0.5">
+                      {t("learningMenu.coursesDesc")}
+                    </span>
+                  </span>
+                </Link>
+                <Link
+                  href="/tools"
+                  role="menuitem"
+                  className="flex gap-3 rounded-xl p-3 hover:bg-[var(--bs-surface-1)]"
+                  onClick={() => setLearningOpen(false)}
+                >
+                  <Wrench className="h-5 w-5 text-[var(--bs-accent)] shrink-0 mt-0.5" />
+                  <span>
+                    <span className="block text-sm font-semibold text-[var(--bs-ink)]">
+                      {t("nav.tools")}
+                    </span>
+                    <span className="block text-xs text-[var(--bs-muted)] mt-0.5">
+                      {t("learningMenu.toolsDesc")}
+                    </span>
+                  </span>
+                </Link>
+                <Link
+                  href="/knowledge-base"
+                  role="menuitem"
+                  className="flex gap-3 rounded-xl p-3 hover:bg-[var(--bs-surface-1)]"
+                  onClick={() => setLearningOpen(false)}
+                >
+                  <Library className="h-5 w-5 text-[var(--bs-accent)] shrink-0 mt-0.5" />
+                  <span>
+                    <span className="block text-sm font-semibold text-[var(--bs-ink)]">
+                      {t("nav.knowledgeBase")}
+                    </span>
+                    <span className="block text-xs text-[var(--bs-muted)] mt-0.5">
+                      {t("learningMenu.kbDesc")}
+                    </span>
+                  </span>
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <Link
+            href="/services"
+            className={linkClass(isActive(pathname, "/services"))}
+          >
+            {t("nav.services")}
+          </Link>
+          <Link
+            href="/workshops"
+            className={linkClass(isActive(pathname, "/workshops"))}
+          >
+            {t("nav.workshops")}
+          </Link>
+          <Link
+            href="/about"
+            className={linkClass(isActive(pathname, "/about"))}
+          >
+            {t("nav.about")}
+          </Link>
+          <Link
+            href="/contact"
+            className={linkClass(isActive(pathname, "/contact"))}
+          >
+            {t("nav.contact")}
+          </Link>
         </nav>
 
-        <div className="flex items-center gap-1 sm:gap-space-sm flex-shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           <button
             type="button"
             aria-label="Open menu"
             aria-expanded={menuOpen}
-            className="lg:hidden w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant bg-surface-container-low hover:bg-surface-container-high"
+            className="lg:hidden w-10 h-10 rounded-lg flex items-center justify-center text-[var(--bs-muted)] bg-[var(--bs-surface-1)] hover:bg-[var(--bs-surface-2)]"
             onClick={() => setMenuOpen((o) => !o)}
           >
-            <span className="material-symbols-outlined text-[22px]">
-              {menuOpen ? "close" : "menu"}
-            </span>
+            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
-          <button
-            aria-label="Global Knowledge Search"
-            className="hidden sm:flex w-10 h-10 rounded-lg items-center justify-center text-on-surface-variant bg-surface-container-low hover:bg-surface-container-high hover:text-on-surface transition-colors"
-            type="button"
-            onClick={() => {
-              window.location.href = "/knowledge-base";
-            }}
+
+          <div
+            className="inline-flex items-center p-0.5 rounded-lg bg-[var(--bs-surface-1)] text-xs font-bold"
+            role="group"
+            aria-label="Language"
           >
-            <span className="material-symbols-outlined text-[20px]">search</span>
-          </button>
-          <div className="inline-flex items-center p-space-xs rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md">
             <button
               type="button"
               aria-pressed={locale === "en"}
-              className={`px-space-sm py-space-xs rounded font-semibold transition-colors ${
+              className={`px-2.5 py-1.5 rounded-md transition-colors ${
                 locale === "en"
-                  ? "bg-surface-container-lowest text-primary shadow-xs"
-                  : "text-on-surface-variant hover:text-on-surface"
+                  ? "bg-[var(--bs-surface-0)] text-[var(--bs-ink)] shadow-sm"
+                  : "text-[var(--bs-muted)]"
               }`}
               onClick={() => setLocale("en")}
             >
@@ -152,56 +203,77 @@ export default function Header() {
             <button
               type="button"
               aria-pressed={locale === "te"}
-              className={`px-space-sm py-space-xs rounded font-semibold transition-colors ${
+              className={`px-2.5 py-1.5 rounded-md transition-colors ${
                 locale === "te"
-                  ? "bg-surface-container-lowest text-primary shadow-xs"
-                  : "text-on-surface-variant hover:text-on-surface"
+                  ? "bg-[var(--bs-surface-0)] text-[var(--bs-ink)] shadow-sm"
+                  : "text-[var(--bs-muted)]"
               }`}
               onClick={() => setLocale("te")}
             >
               తె
             </button>
           </div>
+
           <Link
-            href="/workshops"
-            className="hidden md:inline-flex items-center justify-center px-space-lg py-space-sm rounded-lg bg-secondary-container text-on-tertiary font-title-md text-title-md shadow-[0_4px_14px_rgba(252,139,51,0.35)] hover:bg-secondary hover:text-on-secondary hover:-translate-y-0.5 transition-all"
+            href="/account/login"
+            className="hidden md:inline-flex items-center px-3 py-2 rounded-lg text-sm font-semibold text-[var(--bs-muted)] hover:text-[var(--bs-ink)] hover:bg-[var(--bs-surface-2)]"
           >
-            {pick(locale, "Get Started", "ప్రారంభించండి")}
+            {t("nav.login")}
           </Link>
           <Link
-            href="/contact"
-            className="w-8 h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary-container transition-colors"
-            aria-label="Contact"
+            href="/workshops"
+            className="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-[var(--bs-accent)] text-[var(--bs-accent-fg)] text-sm font-semibold shadow-[0_8px_20px_-10px_rgba(15,118,110,0.7)] hover:brightness-110 transition"
           >
-            <span className="material-symbols-outlined text-on-primary text-[18px]">
-              person
-            </span>
+            {t("nav.getStarted")}
           </Link>
         </div>
       </div>
 
       {menuOpen && (
         <nav
-          className="lg:hidden border-t border-surface-container-high bg-surface-container-lowest px-margin-mobile py-space-md flex flex-col gap-1 shadow-lg max-h-[70vh] overflow-y-auto"
+          className="lg:hidden border-t border-[var(--bs-border)] bg-[var(--bs-surface-0)] px-margin-mobile py-4 flex flex-col gap-1 max-h-[75vh] overflow-y-auto"
           aria-label="Main mobile"
         >
-          {navItems.map((item) => (
-            <NavLink
-              key={item.href}
-              href={item.href}
-              labelEn={item.labelEn}
-              labelTe={item.labelTe}
-              active={isActive(pathname, item.href)}
-              onNavigate={() => setMenuOpen(false)}
-              compact
-            />
-          ))}
+          <p className="px-3 pt-1 pb-2 text-[10px] font-bold uppercase tracking-widest text-[var(--bs-muted)]">
+            {t("nav.learning")}
+          </p>
+          <Link href="/courses" className={linkClass(isActive(pathname, "/courses"))} onClick={() => setMenuOpen(false)}>
+            {t("nav.courses")}
+          </Link>
+          <Link href="/tools" className={linkClass(isActive(pathname, "/tools"))} onClick={() => setMenuOpen(false)}>
+            {t("nav.tools")}
+          </Link>
+          <Link href="/knowledge-base" className={linkClass(isActive(pathname, "/knowledge-base"))} onClick={() => setMenuOpen(false)}>
+            {t("nav.knowledgeBase")}
+          </Link>
+          <Link href="/services" className={linkClass(isActive(pathname, "/services"))} onClick={() => setMenuOpen(false)}>
+            {t("nav.services")}
+          </Link>
+          <Link href="/workshops" className={linkClass(isActive(pathname, "/workshops"))} onClick={() => setMenuOpen(false)}>
+            {t("nav.workshops")}
+          </Link>
+          <Link href="/about" className={linkClass(isActive(pathname, "/about"))} onClick={() => setMenuOpen(false)}>
+            {t("nav.about")}
+          </Link>
+          <Link href="/team" className={linkClass(isActive(pathname, "/team"))} onClick={() => setMenuOpen(false)}>
+            {t("nav.team")}
+          </Link>
+          <Link href="/contact" className={linkClass(isActive(pathname, "/contact"))} onClick={() => setMenuOpen(false)}>
+            {t("nav.contact")}
+          </Link>
           <Link
-            href="/workshops"
-            className="mt-space-sm px-space-md py-space-sm rounded-lg bg-secondary-container text-on-tertiary font-title-md text-center"
+            href="/account/login"
+            className={linkClass(isActive(pathname, "/account"))}
             onClick={() => setMenuOpen(false)}
           >
-            {pick(locale, "Get Started", "ప్రారంభించండి")}
+            {t("nav.login")}
+          </Link>
+          <Link
+            href="/workshops"
+            className="mt-2 px-3 py-2.5 rounded-lg bg-[var(--bs-accent)] text-[var(--bs-accent-fg)] text-sm font-semibold text-center"
+            onClick={() => setMenuOpen(false)}
+          >
+            {t("nav.getStarted")}
           </Link>
         </nav>
       )}

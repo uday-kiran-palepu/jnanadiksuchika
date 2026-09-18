@@ -1,271 +1,125 @@
+"use client";
+
 import Link from "next/link";
+import { useLocale } from "@/lib/i18n/LanguageProvider";
 
 export default function Footer() {
+  const { t } = useLocale();
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="w-full bg-inverse-surface text-inverse-on-surface pt-space-xl pb-space-lg">
+    <footer className="w-full bg-[var(--bs-ink)] text-slate-300 pt-16 pb-10">
       <div className="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter pb-space-xl">
-          <div className="flex flex-col gap-space-md lg:pr-space-md">
-            <div className="flex items-center gap-space-sm">
-              <span className="font-headline-sm text-headline-sm text-surface-bright tracking-tight">
-                Jnana Diksuchika
-              </span>
-            </div>
-            <p className="font-title-md text-title-md text-secondary-fixed-dim font-bold tracking-wide">
-              LEARN. BUILD. GROW.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+          <div className="flex flex-col gap-4 lg:pr-6">
+            <span className="font-display text-xl font-bold text-white tracking-tight">
+              {t("brand.name")}
+            </span>
+            <p className="text-sm font-semibold tracking-wide text-teal-300/90 uppercase">
+              {t("brand.shortTagline")}
             </p>
-            <p className="font-body-sm text-body-sm text-surface-dim leading-relaxed">
-              A directional beacon guiding engineers, researchers, and builders
-              through deep technical knowledge and applied innovation.
+            <p className="text-sm leading-relaxed text-slate-400 max-w-sm">
+              {t("footer.blurb")}
             </p>
-            <div className="flex items-center gap-space-sm pt-space-xs">
-              <a
-                aria-label="Connect on LinkedIn"
-                className="w-9 h-9 rounded-lg bg-tertiary/40 flex items-center justify-center text-surface-dim hover:text-surface-bright hover:bg-primary transition-all"
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="material-symbols-outlined text-[20px]">hub</span>
-              </a>
-              <a
-                aria-label="Explore Code Repositories"
-                className="w-9 h-9 rounded-lg bg-tertiary/40 flex items-center justify-center text-surface-dim hover:text-surface-bright hover:bg-primary transition-all"
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="material-symbols-outlined text-[20px]">code</span>
-              </a>
-              <a
-                aria-label="Watch Technical Lectures"
-                className="w-9 h-9 rounded-lg bg-tertiary/40 flex items-center justify-center text-surface-dim hover:text-surface-bright hover:bg-primary transition-all"
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="material-symbols-outlined text-[20px]">
-                  smart_display
-                </span>
-              </a>
-              <a
-                aria-label="Join Discourse"
-                className="w-9 h-9 rounded-lg bg-tertiary/40 flex items-center justify-center text-surface-dim hover:text-surface-bright hover:bg-primary transition-all"
-                href="/contact"
-              >
-                <span className="material-symbols-outlined text-[20px]">forum</span>
-              </a>
-            </div>
           </div>
 
-          <div className="flex flex-col gap-space-sm">
-            <p className="font-title-md text-title-md text-surface-bright font-semibold tracking-wide">
-              Ecosystem
+          <div>
+            <p className="text-sm font-semibold text-white mb-4">
+              {t("footer.ecosystem")}
             </p>
-            <ul className="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-dim">
-              <li className="pt-space-xs">
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/workshops"
-                >
-                  Workshops &amp; Bootcamps
+            <ul className="flex flex-col gap-2 text-sm">
+              <li>
+                <Link className="hover:text-white transition-colors" href="/courses">
+                  {t("nav.courses")}
                 </Link>
               </li>
               <li>
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/courses"
-                >
-                  Certification Tracks
+                <Link className="hover:text-white transition-colors" href="/knowledge-base">
+                  {t("nav.knowledgeBase")}
                 </Link>
               </li>
               <li>
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/tools"
-                >
-                  Engineering Labs
+                <Link className="hover:text-white transition-colors" href="/tools">
+                  {t("nav.tools")}
                 </Link>
               </li>
               <li>
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/knowledge-base"
-                >
-                  Applied Research Papers
+                <Link className="hover:text-white transition-colors" href="/workshops">
+                  {t("nav.workshops")}
                 </Link>
               </li>
               <li>
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/tools"
-                >
-                  Open Source Tools &amp; SDKs
+                <Link className="hover:text-white transition-colors" href="/services">
+                  {t("nav.services")}
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="flex flex-col gap-space-sm">
-            <p className="font-title-md text-title-md text-surface-bright font-semibold tracking-wide">
-              Organization
+          <div>
+            <p className="text-sm font-semibold text-white mb-4">
+              {t("footer.company")}
             </p>
-            <ul className="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-dim">
-              <li className="pt-space-xs">
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/about"
-                >
-                  About Our Mission
+            <ul className="flex flex-col gap-2 text-sm">
+              <li>
+                <Link className="hover:text-white transition-colors" href="/about">
+                  {t("nav.about")}
                 </Link>
               </li>
               <li>
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/team"
-                >
-                  Leadership &amp; Mentors
+                <Link className="hover:text-white transition-colors" href="/team">
+                  {t("nav.team")}
                 </Link>
               </li>
               <li>
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/contact"
-                >
-                  Careers &amp; Fellowships
+                <Link className="hover:text-white transition-colors" href="/contact">
+                  {t("nav.contact")}
                 </Link>
               </li>
               <li>
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/contact"
-                >
-                  Press &amp; Media Kits
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/about"
-                >
-                  Impact Reports
+                <Link className="hover:text-white transition-colors" href="/account/login">
+                  {t("nav.account")}
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container/5">
-            <p className="font-title-md text-title-md text-secondary-fixed-dim font-semibold tracking-wide flex items-center gap-space-xs">
-              <span className="material-symbols-outlined text-[18px]">
-                menu_book
-              </span>
-              Knowledge Base
+          <div>
+            <p className="text-sm font-semibold text-white mb-4">
+              {t("footer.legal")}
             </p>
-            <ul className="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-dim">
-              <li className="pt-space-xs">
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/knowledge-base"
-                >
-                  Technical Documentation
+            <ul className="flex flex-col gap-2 text-sm">
+              <li>
+                <Link className="hover:text-white transition-colors" href="/privacy">
+                  Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/knowledge-base"
-                >
-                  Architecture Blueprints
+                <Link className="hover:text-white transition-colors" href="/terms">
+                  Terms of Service
                 </Link>
               </li>
               <li>
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/knowledge-base"
-                >
-                  Telugu Tech Glossary (తెలుగు)
+                <Link className="hover:text-white transition-colors" href="/terms#sec-07">
+                  Cookie Settings
                 </Link>
               </li>
               <li>
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/courses"
+                <a
+                  className="hover:text-white transition-colors"
+                  href="mailto:hello@bigswitch.dev"
                 >
-                  Curated Career Roadmaps
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/knowledge-base"
-                >
-                  Community Wiki &amp; Archives
-                </Link>
+                  hello@bigswitch.dev
+                </a>
               </li>
             </ul>
-          </div>
-
-          <div className="flex flex-col gap-space-sm">
-            <p className="font-title-md text-title-md text-surface-bright font-semibold tracking-wide">
-              Connect &amp; Hubs
-            </p>
-            <div className="flex flex-col gap-space-xs font-body-sm text-body-sm text-surface-dim">
-              <div className="flex items-start gap-space-xs pt-space-xs">
-                <span className="material-symbols-outlined text-[18px] text-primary-fixed-dim shrink-0">
-                  location_on
-                </span>
-                <span>Hyderabad &amp; Bengaluru Innovation Nodes, India</span>
-              </div>
-              <div className="flex items-center gap-space-xs">
-                <span className="material-symbols-outlined text-[18px] text-primary-fixed-dim shrink-0">
-                  mail
-                </span>
-                <Link
-                  className="hover:text-surface-bright transition-colors"
-                  href="/contact"
-                >
-                  ops@jnanadiksuchika.org
-                </Link>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-x-space-md gap-y-space-xs pt-space-sm font-label-md text-label-md text-surface-dim/80">
-              <Link
-                className="hover:text-surface-bright transition-colors"
-                href="/privacy"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                className="hover:text-surface-bright transition-colors"
-                href="/terms"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                className="hover:text-surface-bright transition-colors"
-                href="/terms#sec-07"
-              >
-                Cookie Settings
-              </Link>
-              <span className="w-full text-surface-dim/60 text-caption font-caption pt-space-xs">
-                WCAG 2.2 AA Conforming Interface
-              </span>
-            </div>
           </div>
         </div>
 
-        <div className="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-inverse-surface">
-          <div className="flex items-center gap-space-sm">
-            <span className="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-tertiary-container/30 text-surface-bright font-label-sm text-label-sm">
-              <span className="w-2 h-2 rounded-full bg-secondary-container animate-pulse" />
-              All Systems Operational
-            </span>
-            <span className="font-body-sm text-body-sm text-surface-dim hidden sm:inline">
-              • Precision Directional Grid v2.4
-            </span>
-          </div>
-          <p className="font-body-sm text-body-sm text-surface-dim text-center md:text-right">
-            © 2025 Jnana Diksuchika Ecosystem. Guided through knowledge.
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+          <p>{t("footer.copyright", { year })}</p>
+          <p className="text-xs tracking-wide uppercase text-slate-600">
+            {t("brand.tagline")}
           </p>
         </div>
       </div>

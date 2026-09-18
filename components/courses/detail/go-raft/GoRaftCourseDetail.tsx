@@ -50,7 +50,7 @@ export function GoRaftCourseDetail() {
               <div className="flex flex-wrap items-center gap-space-sm">
                 <span className="px-space-sm py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md uppercase tracking-wider flex items-center gap-1">
                   <span className="material-symbols-outlined text-[15px]">explore</span>
-                  జ్ఞాన దిక్సూచిక • ADVANCED SYSTEMS TRACK
+                  Big Switch • ADVANCED SYSTEMS TRACK
                 </span>
                 <span className="px-space-sm py-1 rounded-full bg-secondary-container/15 text-on-secondary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-secondary-container" />
@@ -181,7 +181,7 @@ function ProgressionHud() {
     <div className="mt-space-sm p-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-md">
       <div className="flex items-center justify-between pb-space-xs">
         <span className="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed">
-          The Diksuchika Progression Continuum
+          The Big Switch Progression Continuum
         </span>
         <span className="font-caption text-caption text-surface-dim font-mono">
           STEP 02/03 ACTIVE
@@ -724,7 +724,7 @@ function CertificationSection() {
                 </span>
               </div>
               <h3 className="font-title-lg text-title-lg font-bold text-on-surface">
-                Certificate of Completion — Jnana Diksuchika
+                Certificate of Completion — Big Switch
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
                 Earned strictly after passing all 5 modules, recording 100% test pass
@@ -747,7 +747,7 @@ function CertificationSection() {
               </ul>
             </div>
             <div className="mt-space-md p-space-sm rounded-lg bg-surface-container-low font-caption text-caption text-primary font-mono">
-              VERIFY PROTOCOL: jnanadiksuchika.org/verify/&#123;HASH&#125;
+              VERIFY PROTOCOL: bigswitch.dev/verify/&#123;HASH&#125;
             </div>
           </div>
           <div className="rounded-2xl bg-surface-container-low p-space-lg shadow-sm flex flex-col justify-between">
@@ -764,7 +764,7 @@ function CertificationSection() {
                 Industry Partner &amp; Vendor Accreditation Disclaimer
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Jnana Diksuchika certificates are independent engineering competency
+                Big Switch certificates are independent engineering competency
                 credentials. We do not sell vendor stamps (e.g. AWS, GCP, or Microsoft
                 partner certifications) unless explicitly co-sponsored for specialized
                 cloud tracks.

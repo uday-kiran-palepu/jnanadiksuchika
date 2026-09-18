@@ -10,6 +10,10 @@ export default function CompassAnimation() {
     const container = containerRef.current;
     if (!container) return;
 
+    const prefersReduced =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     const width = container.clientWidth || window.innerWidth;
     const height = container.clientHeight || window.innerHeight;
 
@@ -189,6 +193,10 @@ export default function CompassAnimation() {
 
     const animate = () => {
       frameId = requestAnimationFrame(animate);
+      if (prefersReduced) {
+        renderer.render(scene, camera);
+        return;
+      }
       const elapsedTime = clock.getElapsedTime();
 
       targetRotY = mouseX * 0.9 + Math.sin(elapsedTime * 0.6) * 0.18;

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy & Data Policy | Jnana Diksuchika",
+  title: "Privacy & Data Policy | Big Switch",
   description:
-    "DPDP-aligned privacy practices, zero ad-pixel policy, and ephemeral lab telemetry for Jnana Diksuchika.",
+    "DPDP-aligned privacy practices, zero ad-pixel policy, and ephemeral lab telemetry for Big Switch.",
 };
 
 export default function PrivacyPage() {

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SystemStatesPage } from "@/components/tools/system-states/SystemStatesPage";
 
 export const metadata: Metadata = {
-  title: "System States & Fallback Archetypes | Jnana Diksuchika",
+  title: "System States & Fallback Archetypes | Big Switch",
   description:
     "Design RFC for 404 beacons, empty states, skeleton loaders, form failover, and mobile 390px resiliency patterns.",
 };

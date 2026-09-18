@@ -14,10 +14,10 @@ export function generateMetadata({
 }): Metadata {
   const article = kbArticles.find((a) => a.slug === params.slug);
   if (!article) {
-    return { title: "Knowledge Base | Jnana Diksuchika" };
+    return { title: "Knowledge Base | Big Switch" };
   }
   return {
-    title: `${article.title} | Jnana Diksuchika`,
+    title: `${article.title} | Big Switch`,
     description: article.excerpt,
   };
 }

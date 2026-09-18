@@ -92,7 +92,7 @@ export function ToolsHub() {
                 Bare-Metal Diagnostics
               </span>
               <span className="font-caption text-caption text-secondary font-bold tracking-widest uppercase">
-                {pick(locale, "BENCHMARK SUITE", "జ్ఞాన దిక్సూచిక")}
+                {pick(locale, "BENCHMARK SUITE", "Big Switch")}
               </span>
             </div>
             <h1 className="font-display-hero text-display-hero text-on-surface tracking-tight max-w-4xl">
@@ -701,7 +701,7 @@ function OssBanner() {
                 Have an engineering utility or simulator to share?
               </h2>
               <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Every Jnana Diksuchika utility is open-source, deterministic, and
+                Every Big Switch utility is open-source, deterministic, and
                 executes strictly on-device in the user&apos;s browser.
               </p>
             </div>

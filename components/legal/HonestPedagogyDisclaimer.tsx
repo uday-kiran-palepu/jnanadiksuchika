@@ -15,7 +15,7 @@ export function HonestPedagogyDisclaimer({ className = "" }: HonestPedagogyDiscl
           Honest Pedagogical Disclaimer
         </span>
         <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-          Jnana Diksuchika is an engineering mentorship and applied-research guild — not a degree-granting
+          Big Switch is an engineering mentorship and applied-research guild — not a degree-granting
           university, accredited bootcamp franchise, or government-recognized examination board. Course outcomes,
           workshop certificates, and tooling sandboxes are designed for practitioner skill-building and portfolio
           evidence; they do not replace formal accreditation unless explicitly stated in a signed institutional MOU.

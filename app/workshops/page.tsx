@@ -177,7 +177,7 @@ export default function WorkshopsPage() {
               <span className="material-symbols-outlined text-[16px] text-secondary-container">
                 explore
               </span>
-              జ్ఞాన దిక్సూచిక • SYSTEM INCUBATORS &amp; COHORTS
+              Big Switch • SYSTEM INCUBATORS &amp; COHORTS
             </span>
             <span className="font-caption text-caption uppercase text-outline tracking-wider hidden sm:inline">
               / Workshops &amp; Bootcamps

@@ -1,0 +1,121 @@
+{
+  "brand": {
+    "name": "Big Switch",
+    "tagline": "Flip the switch on your career",
+    "shortTagline": "Learn. Build. Ship."
+  },
+  "nav": {
+    "home": "Home",
+    "learning": "Learning",
+    "courses": "Courses",
+    "tools": "Tools",
+    "knowledgeBase": "Knowledge Base",
+    "services": "Services",
+    "workshops": "Workshops",
+    "about": "About",
+    "team": "Team",
+    "contact": "Contact",
+    "login": "Log in",
+    "account": "Account",
+    "getStarted": "Get started",
+    "exploreLearning": "Explore learning",
+    "engineeringLabs": "Engineering labs",
+    "systemStates": "System states"
+  },
+  "learningMenu": {
+    "title": "Learning",
+    "coursesDesc": "Deep tracks in systems, backends, and production craft",
+    "toolsDesc": "Interactive labs — Raft, diagnostics, and more",
+    "kbDesc": "Guides, roadmaps, and bilingual mental models"
+  },
+  "hero": {
+    "eyebrow": "Learning · Knowledge · Services",
+    "headline": "Big Switch",
+    "subhead": "The platform that flips engineers from theory to production — courses, knowledge base, workshops, and delivery services under one roof.",
+    "ctaPrimary": "Explore learning",
+    "ctaSecondary": "Browse services",
+    "statMentored": "engineers mentored",
+    "statPlacement": "production placement",
+    "statRating": "peer review"
+  },
+  "pillars": {
+    "title": "One ecosystem. Four switches.",
+    "subtitle": "Learning, knowledge, services, and workshops — connected so momentum compounds.",
+    "learning": "Learning",
+    "learningDesc": "Cohorts and self-paced tracks with labs that mirror production failure modes.",
+    "kb": "Knowledge Base",
+    "kbDesc": "Free and paid resources — from Raft guides to career roadmaps.",
+    "services": "Services",
+    "servicesDesc": "Recruitment, staffing, marketing, software, and corporate programs.",
+    "workshops": "Workshops",
+    "workshopsDesc": "Intensive cohorts with bare-metal labs and live debugging."
+  },
+  "faq": {
+    "title": "Questions, answered",
+    "subtitle": "Straight answers about Big Switch learning, knowledge, and services.",
+    "q1": "Is Big Switch only for courses?",
+    "a1": "No. Big Switch combines learning tracks, a knowledge marketplace, live workshops, and professional services — recruitment through corporate training.",
+    "q2": "Do you support Telugu?",
+    "a2": "Yes. Toggle EN / తె in the header. Key surfaces and many knowledge resources are bilingual.",
+    "q3": "How do payments work for Knowledge Base plans?",
+    "a3": "Plan UI is live; payment checkout will connect to Razorpay (or similar). See FUTURE comments in the codebase — no fake success states.",
+    "q4": "Where is the Raft visualizer?",
+    "a4": "Under Learning → Tools. It remains a first-class engineering lab."
+  },
+  "cta": {
+    "title": "Ready to flip the switch?",
+    "subtitle": "Start with a workshop cohort, a course track, or talk to us about services.",
+    "primary": "View workshops",
+    "secondary": "Contact us"
+  },
+  "footer": {
+    "blurb": "Big Switch helps engineers and organizations learn deeply, ship reliably, and grow with direction.",
+    "ecosystem": "Ecosystem",
+    "company": "Company",
+    "legal": "Legal",
+    "copyright": "© {year} Big Switch. All rights reserved."
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "comingSoon": "Coming soon",
+    "free": "Free",
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "backHome": "Back to home"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "From hiring and staffing to digital growth and custom software — delivery with engineering rigor.",
+    "cta": "Talk to us"
+  },
+  "account": {
+    "loginTitle": "Log in",
+    "loginSubtitle": "Account authentication is not wired yet. This is a UI shell for the future auth stack.",
+    "profileTitle": "Your profile",
+    "profileSubtitle": "Profile management will connect to a real auth provider. No fake sessions.",
+    "email": "Email",
+    "password": "Password",
+    "submitLogin": "Continue",
+    "futureNote": "FUTURE: Connect NextAuth / Clerk / custom JWT auth + secure session cookies."
+  },
+  "kbPlans": {
+    "title": "Knowledge plans",
+    "subtitle": "Start free. Unlock deeper archives with ₹1, ₹10, or a monthly subscription.",
+    "free": "Free",
+    "freeDesc": "Core guides and community wiki access.",
+    "one": "₹1 Unlock",
+    "oneDesc": "Single premium resource — pay-per-article.",
+    "ten": "₹10 Pack",
+    "tenDesc": "Ten premium credits across the marketplace.",
+    "sub": "Subscription",
+    "subDesc": "Unlimited premium KB for one month.",
+    "cta": "Choose plan",
+    "paymentNote": "Checkout integration point — Razorpay / UPI (FUTURE)."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "That route is not on the Big Switch map. Try Learning, Services, or Contact.",
+    "home": "Go home"
+  }
+}

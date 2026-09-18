@@ -1,12 +1,15 @@
-# jnana-diksuchika
+# Big Switch
 
-Next.js 14 (App Router) site with TypeScript and Tailwind CSS.
+Next.js 14 (App Router) site — learning, knowledge base, workshops, and professional services.
+
+**Brand:** Big Switch — *Flip the switch on your career.*
 
 ## Stack
 
 - Next.js 14, React 18, TypeScript
-- Tailwind CSS (custom `primary`, `accent`, and `gray` tokens)
-- lucide-react, framer-motion (installed for upcoming UI work)
+- Tailwind CSS (M3-bridged tokens + Big Switch CSS variables)
+- framer-motion, three.js (lazy compass), lucide-react
+- Central i18n: `locales/en.json` + `locales/te.json` via `LanguageProvider` (`useLocale().t`)
 
 ## Run locally
 
@@ -17,53 +20,71 @@ npm run dev
 
 Open [http://127.0.0.1:43123](http://127.0.0.1:43123) (dev binds to port **43123**).
 
-If Preview shows **500** or `Cannot find module './NNN.js'` in the terminal, the dev cache is stale (often after `npm run build` while dev is still running). Stop the server and run:
+If Preview shows **500** or `Cannot find module './NNN.js'`, the `.next` cache is stale (often after `npm run build` while dev is still running). Stop the server and run:
 
 ```bash
 npm run dev:clean
 ```
 
-Production build (stop the dev server first, or use a fresh `.next`):
+Production build:
 
 ```bash
-npm run build
+rm -rf .next && npm run build
 npm start
 ```
 
-## Push to GitHub (`JnanaDiksuchika`)
+## Environment
 
-GitHub repository: **`uday-kiran-palepu/jnanadiksuchika`** — https://github.com/uday-kiran-palepu/jnanadiksuchika.git
+Copy `.env.example` → `.env.local`. No secrets are required for the current mock UI.
 
-**On Windows**, use **WSL** (GitHub CLI does not run in PowerShell):
+| Variable | Purpose |
+|----------|---------|
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL for sitemap, robots, OG |
+| `NEXT_PUBLIC_RAZORPAY_KEY_ID` | FUTURE — KB payment checkout |
+| `DATABASE_URL` / auth vars | FUTURE — CMS, API, auth |
+
+## Language
+
+Header **EN / తె** toggles one locale at a time (never both). Preference persists in `localStorage` (`bs-locale`). Add keys under `locales/*.json` and call `t("nav.courses")`.
+
+## App structure
+
+- Routes: `app/` (Learning: courses/tools/KB, Services, Workshops, About, Contact, Account shells)
+- Shared UI: `components/ui` (Button, Card, Section, Skeleton)
+- Mock data: `lib/data/*` + re-exports in `data/index.ts`
+- SEO: `lib/seo/metadata.ts`, `app/sitemap.ts`, `app/robots.ts`
+
+## Push to GitHub
+
+GitHub repo: **`uday-kiran-palepu/jnanadiksuchika`** — https://github.com/uday-kiran-palepu/jnanadiksuchika.git
+
+The Cursor cloud agent pushes to **Cursor `origin`** only (no GitHub token). To mirror to GitHub on your machine (WSL recommended on Windows):
 
 ```bash
-# Install GitHub CLI if needed: https://cli.github.com/
 gh auth login
-
-cd /path/to/JnanaDiksuchika   # your clone (e.g. from origin repo clone)
 chmod +x scripts/push-to-github.sh
 ./scripts/push-to-github.sh
 ```
 
-Or create the empty repo on [github.com/new](https://github.com/new) (name: `JnanaDiksuchika`), then:
+Or:
 
 ```bash
-git remote add github https://github.com/uday-kiran-palepu/JnanaDiksuchika.git
+git remote add github https://github.com/uday-kiran-palepu/jnanadiksuchika.git
+# or: git remote set-url github https://github.com/uday-kiran-palepu/jnanadiksuchika.git
 git push -u github main
 ```
 
 ## Deploy on Vercel
 
-1. Push this repository to GitHub.
-2. In [Vercel](https://vercel.com), import the repo (framework preset: **Next.js**).
-3. Build command: `npm run build` (default). Output: Next.js default.
-4. No environment variables are required for the current static/client-side features.
-5. After deploy, set your production domain in Vercel; all routes under `app/` are included.
+1. Push this repository to GitHub (`jnanadiksuchika`).
+2. Import in [Vercel](https://vercel.com) (framework: **Next.js**).
+3. Build: `npm run build`. Set `NEXT_PUBLIC_SITE_URL` to your production domain.
+4. No other env vars required for the static/client features.
+5. After deploy, all `app/` routes are included (services, account shells, sitemap, robots).
 
-## Language toggle
+## FUTURE (documented, not implemented)
 
-The header **EN / తె** switch stores preference in `localStorage` and shows either English or Telugu copy on key surfaces (navigation, hero, courses, knowledge base, tools). Expand translations in `lib/i18n/LanguageProvider.tsx` and page components using `pick(locale, en, te)`.
-
-## App structure
-
-Routes live under `app/` (not `src/app`). Shared `Header` and `Footer` are rendered from the root `layout.tsx`.
+- Auth (login/profile are UI shells only)
+- Razorpay / UPI for KB plans
+- CMS / API for courses and articles
+- Real CRM / calendar for services intake

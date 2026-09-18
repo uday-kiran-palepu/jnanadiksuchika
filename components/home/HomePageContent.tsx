@@ -1,24 +1,26 @@
-import { AboutPreviewSection } from "@/components/home/AboutPreviewSection";
+import { FaqSection } from "@/components/home/FaqSection";
+import { FeaturedLearningSection } from "@/components/home/FeaturedLearningSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
-import { GallerySection } from "@/components/home/GallerySection";
 import { HeroSection } from "@/components/home/HeroSection";
-import { PathwaysSection } from "@/components/home/PathwaysSection";
-import { TeamTeaserSection } from "@/components/home/TeamTeaserSection";
-import { TechStackSection } from "@/components/home/TechStackSection";
+import { KbPreviewSection } from "@/components/home/KbPreviewSection";
+import { PillarsSection } from "@/components/home/PillarsSection";
+import { ServicesPreviewSection } from "@/components/home/ServicesPreviewSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
+import { WhyHowSection } from "@/components/home/WhyHowSection";
 import { WorkshopsSection } from "@/components/home/WorkshopsSection";
 
 export function HomePageContent() {
   return (
     <div className="flex flex-col w-full">
       <HeroSection />
-      <PathwaysSection />
-      <TechStackSection />
-      <AboutPreviewSection />
-      <TeamTeaserSection />
+      <PillarsSection />
+      <FeaturedLearningSection />
+      <KbPreviewSection />
+      <ServicesPreviewSection />
       <WorkshopsSection />
-      <GallerySection />
+      <WhyHowSection />
       <TestimonialsSection />
+      <FaqSection />
       <FinalCtaSection />
     </div>
   );

@@ -14,12 +14,12 @@ export function generateMetadata({
 }): Metadata {
   if (params.slug === RAFT_VISUALIZER_SLUG) {
     return {
-      title: "Raft Consensus & Split-Brain Visualizer | Jnana Diksuchika",
+      title: "Raft Consensus & Split-Brain Visualizer | Big Switch",
       description:
         "Simulate 3–7 node Raft clusters, network partitions, leader elections, and log commits. Client-side interactive sandbox.",
     };
   }
-  return { title: "Tool | Jnana Diksuchika" };
+  return { title: "Tool | Big Switch" };
 }
 
 type ToolDetailPageProps = {

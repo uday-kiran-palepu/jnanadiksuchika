@@ -1,43 +1,36 @@
+"use client";
+
 import Link from "next/link";
+import { useLocale } from "@/lib/i18n/LanguageProvider";
+import { Button } from "@/components/ui/Button";
 
 export default function NotFound() {
+  const { t } = useLocale();
+
   return (
-    <div className="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin py-space-xl">
-      <div className="rounded-2xl bg-surface-container-low p-space-xl shadow-md">
-        <div className="inline-flex items-center gap-2 px-space-md py-1 rounded-full bg-error-container text-on-error-container font-mono text-xs font-semibold mb-space-md">
-          HTTP 404 • ERR_BEARING_UNDEFINED
-        </div>
-        <h1 className="font-headline-lg text-headline-lg text-on-surface mb-space-sm">
-          Vector Out of Coordinate Range
-        </h1>
-        <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-lg">
-          This route does not resolve to an active page. Check the URL or return to
-          the mission home grid.
+    <div className="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin py-20">
+      <div className="rounded-3xl border border-[var(--bs-border)] bg-[var(--bs-surface-0)] p-10 md:p-14 shadow-sm">
+        <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--bs-warm)] mb-4">
+          404
         </p>
-        <div className="flex flex-wrap gap-space-sm">
-          <Link
-            href="/"
-            className="px-space-lg py-space-sm rounded-lg bg-primary text-on-primary font-title-md shadow-sm hover:bg-primary-container transition-colors"
-          >
-            Mission Home
+        <h1 className="font-display text-3xl md:text-4xl font-bold text-[var(--bs-ink)]">
+          {t("notFound.title")}
+        </h1>
+        <p className="mt-4 text-[var(--bs-muted)] max-w-xl leading-relaxed">
+          {t("notFound.body")}
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link href="/">
+            <Button>{t("notFound.home")}</Button>
           </Link>
-          <Link
-            href="/courses"
-            className="px-space-lg py-space-sm rounded-lg bg-surface-container text-on-surface font-title-md hover:bg-surface-container-high transition-colors"
-          >
-            Browse Courses
+          <Link href="/courses">
+            <Button variant="outline">{t("nav.courses")}</Button>
           </Link>
-          <Link
-            href="/tools"
-            className="px-space-lg py-space-sm rounded-lg bg-surface-container text-on-surface font-title-md hover:bg-surface-container-high transition-colors"
-          >
-            Engineering Tools
+          <Link href="/services">
+            <Button variant="ghost">{t("nav.services")}</Button>
           </Link>
-          <Link
-            href="/tools/system-states"
-            className="px-space-lg py-space-sm rounded-lg bg-surface-container-low text-primary font-title-md hover:bg-surface-container-high transition-colors"
-          >
-            Error &amp; Fallback Spec
+          <Link href="/tools/system-states">
+            <Button variant="ghost">{t("nav.systemStates")}</Button>
           </Link>
         </div>
       </div>

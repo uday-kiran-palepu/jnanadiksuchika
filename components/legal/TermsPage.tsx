@@ -30,7 +30,7 @@ const CLAUSES: { id: string; title: string; body: React.ReactNode }[] = [
     title: "Acceptance & Scope",
     body: (
       <>
-        By accessing jnanadiksuchika.org, enrolling in workshops, or using our engineering tools, you agree to these
+        By accessing bigswitch.dev, enrolling in workshops, or using our engineering tools, you agree to these
         Terms. If you disagree, discontinue use of our digital properties. These Terms apply to all visitors, cohort
         participants, institutional partners, and open-source contributors.
       </>
@@ -87,7 +87,7 @@ const CLAUSES: { id: string; title: string; body: React.ReactNode }[] = [
     title: "Intellectual Property & Licensing",
     body: (
       <>
-        Curriculum PDFs, lecture recordings, and proprietary visualizations remain © Jnana Diksuchika unless marked
+        Curriculum PDFs, lecture recordings, and proprietary visualizations remain © Big Switch unless marked
         otherwise. Open-source repositories ship under their respective LICENSE files; contributions follow each
         project&apos;s CLA.
       </>
@@ -112,7 +112,7 @@ const CLAUSES: { id: string; title: string; body: React.ReactNode }[] = [
         These Terms are governed by the laws of India, with courts in Andhra Pradesh having jurisdiction. We may update
         this document with notice on-site. Questions:{" "}
         <Link className="text-primary font-semibold hover:underline" href="/contact">contact faculty ops</Link> or
-        email ops@jnanadiksuchika.org. Effective date: 17 September 2025.
+        email ops@bigswitch.dev. Effective date: 17 September 2025.
       </>
     ),
   },

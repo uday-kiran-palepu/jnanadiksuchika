@@ -18,7 +18,7 @@ export function AboutPreviewSection() {
             <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
               Most EdTech platforms sell shallow syntax or automated multiple-choice
               quizzes that collapse the moment you encounter a live production
-              outage. Jnana Diksuchika bridges the gap between deep native
+              outage. Big Switch bridges the gap between deep native
               vernacular comprehension (Telugu) and high-rigor Silicon Valley
               engineering standards.
             </p>
@@ -69,7 +69,7 @@ export function AboutPreviewSection() {
                   </span>
                   <div className="flex flex-col">
                     <span className="font-label-sm text-label-sm text-primary uppercase font-bold">
-                      Jnana Diksuchika Rigor
+                      Big Switch Rigor
                     </span>
                     <span className="font-body-sm text-body-sm text-on-surface font-medium">
                       Bare-metal Linux labs, Raft consensus implementations from
