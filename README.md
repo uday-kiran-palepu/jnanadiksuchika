@@ -32,7 +32,7 @@ npm start
 
 ## Push to GitHub (`JnanaDiksuchika`)
 
-This project is named **JnanaDiksuchika** on GitHub: `uday-kiran-palepu/JnanaDiksuchika`.
+GitHub repository: **`uday-kiran-palepu/jnanadiksuchika`** — https://github.com/uday-kiran-palepu/jnanadiksuchika.git
 
 **On Windows**, use **WSL** (GitHub CLI does not run in PowerShell):
 

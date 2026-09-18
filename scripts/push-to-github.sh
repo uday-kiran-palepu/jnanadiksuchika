@@ -5,7 +5,7 @@
 set -euo pipefail
 
 OWNER="uday-kiran-palepu"
-REPO="JnanaDiksuchika"
+REPO="jnanadiksuchika"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 
 cd "$ROOT"
