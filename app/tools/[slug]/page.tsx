@@ -25,17 +25,17 @@ export function generateMetadata({
 }): Metadata {
   const tool = getHubTool(params.slug);
   if (!tool) {
-    return { title: "Tool | Big Switch" };
+    return { title: "Tool | Jnana Diksuchika" };
   }
   if (params.slug === RAFT_VISUALIZER_SLUG) {
     return {
-      title: "Raft Consensus & Split-Brain Visualizer | Big Switch",
+      title: "Raft Consensus & Split-Brain Visualizer | Jnana Diksuchika",
       description:
         "Simulate 3–7 node Raft clusters, network partitions, leader elections, and log commits. Client-side interactive sandbox.",
     };
   }
   return {
-    title: `${tool.title} | Big Switch`,
+    title: `${tool.title} | Jnana Diksuchika`,
     description: tool.summary,
   };
 }

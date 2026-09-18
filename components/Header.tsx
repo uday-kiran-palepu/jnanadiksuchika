@@ -56,7 +56,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2.5 min-w-0 shrink-0">
           <Image
             src={BRAND_LOGO_SRC}
-            alt="Big Switch logo"
+            alt="Jnana Diksuchika logo"
             width={36}
             height={36}
             className="h-9 w-9 rounded-lg object-contain"

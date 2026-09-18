@@ -123,7 +123,7 @@ export function CoursesCatalog() {
             <div className="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm w-fit shadow-xs">
               <span className="w-2 h-2 rounded-full bg-secondary-container" />
               <span>
-                Big Switch • COMPREHENSIVE CURRICULUM ARCHIVE / Courses
+                Jnana Diksuchika • COMPREHENSIVE CURRICULUM ARCHIVE / Courses
               </span>
             </div>
             <h1 className="font-display-hero text-display-hero-mobile lg:text-display-hero text-on-surface tracking-tight">
@@ -437,7 +437,7 @@ export function CoursesCatalog() {
                 &quot;
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant mt-space-sm max-w-md">
-                Big Switch only certifies ground-truth engineering tracks
+                Jnana Diksuchika only certifies ground-truth engineering tracks
                 backed by real kernel and systems utility.
               </p>
               <div className="p-space-md rounded-lg bg-surface-container-low mt-space-md w-full text-left">
@@ -509,7 +509,7 @@ export function CoursesCatalog() {
               PEDAGOGICAL CONTRACT • ఇంజనీరింగ్ ప్రామాణికత
             </span>
             <h2 className="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-on-surface font-bold">
-              The Big Switch Course Experience Guarantee
+              The Jnana Diksuchika Course Experience Guarantee
             </h2>
             <p className="font-body-md text-body-md text-on-surface-variant">
               Engineered for cognitive retention and architectural depth, without

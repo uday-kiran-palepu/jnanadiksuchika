@@ -1,10 +1,10 @@
-export const SITE_NAME = "Big Switch";
+export const SITE_NAME = "Jnana Diksuchika";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://bigswitch.example";
+  "https://jnanadiksuchika.example";
 export const SITE_DESCRIPTION =
-  "Big Switch — learning, knowledge base, workshops, and professional services that flip engineers from theory to production.";
-export const SITE_TAGLINE = "Flip the switch on your career";
+  "Jnana Diksuchika — learning, knowledge base, workshops, and professional services that guide engineers from theory to production.";
+export const SITE_TAGLINE = "Knowledge that gives you direction";
 
 export function absoluteUrl(path = "/") {
   const p = path.startsWith("/") ? path : `/${path}`;

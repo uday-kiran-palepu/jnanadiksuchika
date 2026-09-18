@@ -104,7 +104,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "2",
     quote:
-      "Big Switch workshops feel like production incident review, not classroom theater. Exactly what our team needed.",
+      "Jnana Diksuchika workshops feel like production incident review, not classroom theater. Exactly what our team needed.",
     name: "Karthik M.",
     role: "SRE Lead",
   },

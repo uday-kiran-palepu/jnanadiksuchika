@@ -13,8 +13,8 @@ import te from "@/locales/te.json";
 
 export type Locale = "en" | "te";
 
-const STORAGE_KEY = "bs-locale";
-const LEGACY_STORAGE_KEY = "jd-locale";
+const STORAGE_KEY = "jd-locale";
+const LEGACY_STORAGE_KEY = "bs-locale";
 
 type Messages = typeof en;
 
@@ -67,6 +67,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     document.documentElement.lang = locale === "te" ? "te" : "en";
     try {
       localStorage.setItem(STORAGE_KEY, locale);
+      // Keep legacy key in sync for older tabs, then prefer jd-locale on next load
       localStorage.setItem(LEGACY_STORAGE_KEY, locale);
     } catch {
       /* ignore */

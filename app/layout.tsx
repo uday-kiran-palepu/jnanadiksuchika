@@ -19,7 +19,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = buildMetadata({
-  title: "Big Switch",
+  title: "Jnana Diksuchika",
   path: "/",
 });
 

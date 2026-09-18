@@ -3,7 +3,7 @@ import { LoginShell } from "@/components/account/LoginShell";
 
 export const metadata = buildMetadata({
   title: "Log in",
-  description: "Big Switch account login shell — authentication coming soon.",
+  description: "Jnana Diksuchika account login shell — authentication coming soon.",
   path: "/account/login",
   noIndex: true,
 });

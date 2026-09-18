@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* Big Switch — premium tech SaaS (slate + teal, not purple/cream) */
+    /* Jnana Diksuchika — premium tech SaaS (slate + teal, not purple/cream) */
     --bs-ink: #0b1220;
     --bs-ink-soft: #1a2333;
     --bs-muted: #5b6577;
@@ -20,7 +20,7 @@
     --bs-hero-glow: rgba(15, 118, 110, 0.18);
     --bs-grid: rgba(15, 23, 42, 0.04);
 
-    /* Bridge legacy M3 token names toward Big Switch palette */
+    /* Bridge legacy M3 token names toward Jnana Diksuchika palette */
     --color-background: var(--bs-surface-1);
     --color-surface: var(--bs-surface-1);
     --color-on-surface: var(--bs-ink);

@@ -69,7 +69,7 @@ export function KbPlansSection() {
                 // FUTURE: INTEGRATION POINT — Razorpay / UPI checkout.
                 // Do NOT show fake payment success. Open checkout session via API route.
                 console.info(
-                  "[Big Switch] KB plan selected — payment integration pending:",
+                  "[Jnana Diksuchika] KB plan selected — payment integration pending:",
                   plan.id
                 );
               }}

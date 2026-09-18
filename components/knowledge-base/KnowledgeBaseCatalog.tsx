@@ -68,7 +68,7 @@ export function KnowledgeBaseCatalog() {
         <div className="max-w-[1320px] mx-auto flex flex-col gap-space-lg relative z-10">
           <div className="flex flex-col gap-space-sm">
             <span className="font-label-sm text-label-sm font-semibold tracking-wider uppercase text-primary px-space-sm py-space-xs rounded bg-surface-container-highest w-fit">
-              {pick(locale, "ARCHITECTURAL REPOSITORY", "Big Switch")}
+              {pick(locale, "ARCHITECTURAL REPOSITORY", "ఆర్కిటెక్చరల్ రిపాజిటరీ")}
             </span>
             <h1 className="font-display-hero text-display-hero text-on-surface tracking-tight leading-none max-w-4xl">
               {pick(

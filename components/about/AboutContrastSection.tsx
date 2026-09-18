@@ -6,7 +6,7 @@ const contrasts = [
     badLabel: "Typical Coaching Centre",
     bad:
       "Pre-recorded slide decks, copy-pasting frontend widgets, and toy applications that collapse the moment they run beyond localhost.",
-    goodLabel: "Big Switch",
+    goodLabel: "Jnana Diksuchika",
     good:
       "Live kernel tracing via eBPF, writing custom TCP network stacks, bare-metal server provisioning, and debugging induced memory leaks in live workloads.",
     goodColor: "text-primary",
@@ -18,7 +18,7 @@ const contrasts = [
     badLabel: "Typical IT Agency / Institute",
     bad:
       "Fictional e-commerce apps with hardcoded mock JSON; zero concurrent connection handling, zero load testing, and zero failover recovery.",
-    goodLabel: "Big Switch",
+    goodLabel: "Jnana Diksuchika",
     good:
       "Verified upstream Git commits, distributed consensus engines (Raft) handling simulated split-brain partitions, and proxy reverse caches reviewed by Staff engineers.",
     goodColor: "text-primary",
@@ -30,7 +30,7 @@ const contrasts = [
     badLabel: "Typical Coaching Centre",
     bad:
       "Inflated placement percentage stats, aggressive telecaller sales teams, predatory deferred ISA contracts with 36-month salary garnishments.",
-    goodLabel: "Big Switch",
+    goodLabel: "Jnana Diksuchika",
     good:
       "100% upfront transparent fee schedule, zero hidden debt locks, an uncompromising diagnostic entrance filter, and auditable outcomes.",
     goodColor: "text-secondary",
@@ -42,7 +42,7 @@ const contrasts = [
     badLabel: "Typical Coaching Centre",
     bad:
       "Rote memorization of two-pointer code snippets without knowing heap memory layout, garbage collection cycles, or thread safety locks.",
-    goodLabel: "Big Switch",
+    goodLabel: "Jnana Diksuchika",
     good:
       "Formal RFC design defense panels, latency profiling with flame graphs, mock architectural teardowns, and high-trust peer endorsements for top roles.",
     goodColor: "text-tertiary",
@@ -59,7 +59,7 @@ export function AboutContrastSection() {
               ARCHITECTURAL BENCHMARK
             </span>
             <h2 className="mt-space-xs font-headline-lg text-headline-lg text-on-surface tracking-tight">
-              The Engineering Contrast: How Big Switch Redefines Capability
+              The Engineering Contrast: How Jnana Diksuchika Redefines Capability
             </h2>
           </div>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-md">

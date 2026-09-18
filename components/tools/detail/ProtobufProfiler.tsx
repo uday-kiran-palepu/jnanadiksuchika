@@ -6,7 +6,7 @@ import type { HubTool } from "@/components/tools/data";
 
 const SAMPLE_JSON = `{
   "userId": 18422,
-  "email": "ops@bigswitch.dev",
+  "email": "ops@jnanadiksuchika.org",
   "roles": ["sre", "mentor"],
   "prefs": { "locale": "te", "theme": "system" }
 }`;

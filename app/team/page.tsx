@@ -126,7 +126,7 @@ export default function TeamPage() {
           <div className="flex flex-wrap items-center justify-between gap-space-sm pb-space-md">
             <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-low text-primary text-label-md font-label-md shadow-sm">
               <span className="font-bold tracking-widest text-secondary-container">
-                Big Switch
+                Jnana Diksuchika
               </span>
               <span className="text-outline-variant">•</span>
               <span className="font-semibold uppercase tracking-wider text-on-surface-variant">
@@ -152,7 +152,7 @@ export default function TeamPage() {
               </h1>
               <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
                 We do not hire professional slide-readers or career lecturers. Every
-                mentor at Big Switch builds, debugs, and deploys high-scale software
+                mentor at Jnana Diksuchika builds, debugs, and deploys high-scale software
                 in production while translating complex systems into intuitive mental
                 models in Telugu and English.
               </p>
@@ -162,7 +162,7 @@ export default function TeamPage() {
                 <div className="absolute -right-8 -bottom-8 w-28 h-28 bg-primary-fixed/40 rounded-full blur-2xl pointer-events-none" />
                 <div className="flex items-center gap-space-xs text-secondary font-title-md text-title-md">
                   <span className="material-symbols-outlined text-[22px]">verified_user</span>
-                  <span>The Big Switch Standard</span>
+                  <span>The Jnana Diksuchika Standard</span>
                 </div>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">
                   Every mentor commits to live kernel packet inspection, bare-metal
@@ -485,7 +485,7 @@ export default function TeamPage() {
                 title: "Telugu & English Dual Fluency",
                 body:
                   "Language should never bottleneck technical mastery. Our mentors seamlessly translate complex architectural abstractions into intuitive Telugu mental models while preserving standard industry terminology for global interviews.",
-                foot: "Big Switch Pedagogy",
+                foot: "Jnana Diksuchika Pedagogy",
                 footColor: "text-secondary",
               },
               {

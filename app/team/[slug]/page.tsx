@@ -13,9 +13,9 @@ export function generateMetadata({
   params: { slug: string };
 }): Metadata {
   const found = getTeamMember(params.slug);
-  if (!found) return { title: "Team | Big Switch" };
+  if (!found) return { title: "Team | Jnana Diksuchika" };
   return {
-    title: `${found.member.name} | Big Switch`,
+    title: `${found.member.name} | Jnana Diksuchika`,
     description: found.member.bio,
   };
 }

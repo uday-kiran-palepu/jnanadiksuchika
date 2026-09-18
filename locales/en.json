@@ -1,7 +1,7 @@
 {
   "brand": {
-    "name": "Big Switch",
-    "tagline": "Flip the switch on your career",
+    "name": "Jnana Diksuchika",
+    "tagline": "Knowledge that gives you direction",
     "shortTagline": "Learn. Build. Ship."
   },
   "nav": {
@@ -30,8 +30,8 @@
   },
   "hero": {
     "eyebrow": "Learning · Knowledge · Services",
-    "headline": "Big Switch",
-    "subhead": "The platform that flips engineers from theory to production — courses, knowledge base, workshops, and delivery services under one roof.",
+    "headline": "Jnana Diksuchika",
+    "subhead": "The platform that guides engineers from theory to production — courses, knowledge base, workshops, and delivery services under one roof.",
     "ctaPrimary": "Explore learning",
     "ctaSecondary": "Browse services",
     "statMentored": "engineers mentored",
@@ -39,7 +39,7 @@
     "statRating": "peer review"
   },
   "pillars": {
-    "title": "One ecosystem. Four switches.",
+    "title": "One ecosystem. Four pillars.",
     "subtitle": "Learning, knowledge, services, and workshops — connected so momentum compounds.",
     "learning": "Learning",
     "learningDesc": "Cohorts and self-paced tracks with labs that mirror production failure modes.",
@@ -52,9 +52,9 @@
   },
   "faq": {
     "title": "Questions, answered",
-    "subtitle": "Straight answers about Big Switch learning, knowledge, and services.",
-    "q1": "Is Big Switch only for courses?",
-    "a1": "No. Big Switch combines learning tracks, a knowledge marketplace, live workshops, and professional services — recruitment through corporate training.",
+    "subtitle": "Straight answers about Jnana Diksuchika learning, knowledge, and services.",
+    "q1": "Is Jnana Diksuchika only for courses?",
+    "a1": "No. Jnana Diksuchika combines learning tracks, a knowledge marketplace, live workshops, and professional services — recruitment through corporate training.",
     "q2": "Do you support Telugu?",
     "a2": "Yes. Toggle EN / తె in the header. Key surfaces and many knowledge resources are bilingual.",
     "q3": "How do payments work for Knowledge Base plans?",
@@ -63,17 +63,17 @@
     "a4": "Under Learning → Tools. It remains a first-class engineering lab."
   },
   "cta": {
-    "title": "Ready to flip the switch?",
+    "title": "Ready to find your direction?",
     "subtitle": "Start with a workshop cohort, a course track, or talk to us about services.",
     "primary": "View workshops",
     "secondary": "Contact us"
   },
   "footer": {
-    "blurb": "Big Switch helps engineers and organizations learn deeply, ship reliably, and grow with direction.",
+    "blurb": "Jnana Diksuchika helps engineers and organizations learn deeply, ship reliably, and grow with direction.",
     "ecosystem": "Ecosystem",
     "company": "Company",
     "legal": "Legal",
-    "copyright": "© {year} Big Switch. All rights reserved."
+    "copyright": "© {year} Jnana Diksuchika. All rights reserved."
   },
   "common": {
     "learnMore": "Learn more",
@@ -115,7 +115,7 @@
   },
   "notFound": {
     "title": "Page not found",
-    "body": "That route is not on the Big Switch map. Try Learning, Services, or Contact.",
+    "body": "That route is not on the Jnana Diksuchika map. Try Learning, Services, or Contact.",
     "home": "Go home"
   }
 }

@@ -107,7 +107,7 @@ export function SystemStatesPage() {
         <div className="max-w-[1320px] mx-auto flex flex-col gap-space-lg">
           <div className="flex flex-col gap-space-sm max-w-4xl">
             <span className="font-label-sm text-label-sm font-semibold tracking-wider uppercase text-primary px-space-sm py-space-xs rounded bg-surface-container-highest w-fit">
-              Big Switch • RESILIENCY PATTERN LIBRARY
+              Jnana Diksuchika • RESILIENCY PATTERN LIBRARY
             </span>
             <h1 className="font-display-hero text-display-hero-mobile lg:text-display-hero text-on-surface tracking-tight leading-tight">
               System States, Error Resiliency &amp; Fallback Archetypes
@@ -336,14 +336,14 @@ export function SystemStatesPage() {
                   <span className="material-symbols-outlined text-error">cloud_off</span>
                   <div>
                     <span className="font-title-md text-title-md font-semibold text-error">Edge gateway timeout (504)</span>
-                    <p className="font-body-sm text-body-sm mt-1">Upstream handshake to api.bigswitch.dev failed.</p>
+                    <p className="font-body-sm text-body-sm mt-1">Upstream handshake to api.jnanadiksuchika.org failed.</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
                   {[
-                    { label: "Telegram", value: "@BigSwitchOps" },
+                    { label: "Telegram", value: "@JnanaDiksuchikaOps" },
                     { label: "WhatsApp", value: "+91 94942 81290" },
-                    { label: "PGP Email", value: "ops@bigswitch.dev" },
+                    { label: "PGP Email", value: "ops@jnanadiksuchika.org" },
                   ].map((ch) => (
                     <div key={ch.label} className="p-space-sm rounded-lg bg-surface-container-low">
                       <span className="font-caption text-caption text-outline uppercase">{ch.label}</span>

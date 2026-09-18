@@ -124,7 +124,7 @@ export const moduleBodies: Record<string, string> = {
   m04:
     "Logs cannot grow infinitely. Master memory compaction via periodic state snapshotting, stream InstallSnapshot RPCs to lagging replicas, and implement persistent disk syncing (fsync) to survive hard node power-offs.",
   m05:
-    "Deploy your finished 5-node distributed store on Big Switch bare-metal nodes. While our automated chaos generator injects packet drops and kills nodes at random, defend your latency percentiles and consensus safety live before our faculty panel.",
+    "Deploy your finished 5-node distributed store on Jnana Diksuchika bare-metal nodes. While our automated chaos generator injects packet drops and kills nodes at random, defend your latency percentiles and consensus safety live before our faculty panel.",
 };
 
 export const courseFaqs = [
@@ -151,6 +151,6 @@ export const courseFaqs = [
   {
     q: "What bare-metal hardware access is provided?",
     a:
-      "Every enrolled station receives 40 dedicated lab hours on Big Switch bare-metal nodes situated in our Hyderabad datacenter. Each participant is provisioned 5 isolated Linux nodes connected via dedicated VLAN with sudo access to run kernel-level network emulation (tc/netem).",
+      "Every enrolled station receives 40 dedicated lab hours on Jnana Diksuchika bare-metal nodes situated in our Hyderabad datacenter. Each participant is provisioned 5 isolated Linux nodes connected via dedicated VLAN with sudo access to run kernel-level network emulation (tc/netem).",
   },
 ];

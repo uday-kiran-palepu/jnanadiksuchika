@@ -1,13 +1,13 @@
-# Big Switch
+# Jnana Diksuchika
 
 Next.js 14 (App Router) site — learning, knowledge base, workshops, and professional services.
 
-**Brand:** Big Switch — *Flip the switch on your career.*
+**Brand:** Jnana Diksuchika — *Knowledge that gives you direction.*
 
 ## Stack
 
 - Next.js 14, React 18, TypeScript
-- Tailwind CSS (M3-bridged tokens + Big Switch CSS variables)
+- Tailwind CSS (M3-bridged tokens + Jnana Diksuchika CSS variables)
 - framer-motion, three.js (lazy compass), lucide-react
 - Central i18n: `locales/en.json` + `locales/te.json` via `LanguageProvider` (`useLocale().t`)
 
@@ -45,7 +45,7 @@ Copy `.env.example` → `.env.local`. No secrets are required for the current mo
 
 ## Language
 
-Header **EN / తె** toggles one locale at a time (never both). Preference persists in `localStorage` (`bs-locale`). Add keys under `locales/*.json` and call `t("nav.courses")`.
+Header **EN / తె** toggles one locale at a time (never both). Preference persists in `localStorage` (`jd-locale`). Add keys under `locales/*.json` and call `t("nav.courses")`.
 
 ## App structure
 

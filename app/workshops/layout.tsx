@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Workshops | Big Switch",
+  title: "Workshops | Jnana Diksuchika",
   description:
     "High-velocity engineering workshops, systems bootcamps, and curated cohorts.",
 };

@@ -18,10 +18,10 @@ export function generateMetadata({
 }): Metadata {
   const cohort = workshopCohorts.find((c) => c.slug === params.slug);
   if (!cohort) {
-    return { title: "Workshop | Big Switch" };
+    return { title: "Workshop | Jnana Diksuchika" };
   }
   return {
-    title: `${cohort.title} | Big Switch`,
+    title: `${cohort.title} | Jnana Diksuchika`,
     description: cohort.envNote,
   };
 }

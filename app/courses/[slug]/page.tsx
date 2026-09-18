@@ -18,10 +18,10 @@ export function generateMetadata({
 }): Metadata {
   const course = catalogCourses.find((c) => c.slug === params.slug);
   if (!course) {
-    return { title: "Course | Big Switch" };
+    return { title: "Course | Jnana Diksuchika" };
   }
   return {
-    title: `${course.title} | Big Switch`,
+    title: `${course.title} | Jnana Diksuchika`,
     description: course.description,
   };
 }

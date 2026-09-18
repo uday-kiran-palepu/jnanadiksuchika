@@ -11,7 +11,7 @@ export function AboutHeroSection() {
         <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high shadow-xs">
           <span className="w-2 h-2 rounded-full bg-secondary-container animate-pulse" />
           <span className="font-label-md text-label-md text-primary font-bold tracking-wider uppercase">
-            Big Switch • Philosophical Manifesto
+            జ్ఞాన దిక్సూచిక • Philosophical Manifesto
           </span>
           <span className="text-outline-variant">/</span>
           <span className="font-label-md text-label-md text-on-surface-variant font-medium">
@@ -24,12 +24,16 @@ export function AboutHeroSection() {
             A Directional Compass For High-Trajectory Engineers.
           </h1>
           <p className="mt-space-md font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
-            <span className="text-primary font-semibold">Big Switch</span> is the
-            moment an engineer stops collecting content and starts shipping with
-            judgment — flipping from theory theater to production craft. Velocity
-            without orientation produces burnout and fragile careers. We rebuild
-            engineering intuition from the silicon layer upward, then connect it to
-            knowledge, workshops, and delivery services under one roof.
+            The name{" "}
+            <span className="text-primary font-semibold">Jnana Diksuchika</span> comes
+            from ancient Sanskrit and Telugu roots:{" "}
+            <em className="font-title-md text-primary">Jnana</em> (Verifiable
+            Ground-Truth Knowledge) and{" "}
+            <em className="font-title-md text-secondary">Diksuchika</em> (The Precision
+            Navigational Compass). In modern technical education, velocity without
+            orientation produces burnout and fragile careers. We rebuild engineering
+            intuition from the silicon layer upward, then connect it to knowledge,
+            workshops, and delivery services under one roof.
           </p>
         </div>
 

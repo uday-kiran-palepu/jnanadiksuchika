@@ -30,7 +30,7 @@ export function WhyHowSection() {
   return (
     <>
       <Section
-        title="Why Big Switch"
+        title="Why Jnana Diksuchika"
         subtitle="A coherent bet: depth beats hype, and direction beats more content."
         className="bg-[var(--bs-surface-0)]"
       >

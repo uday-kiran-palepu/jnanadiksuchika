@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Team | Big Switch",
+  title: "Team | Jnana Diksuchika",
   description:
-    "Faculty, mentors, and associate instructors at Big Switch.",
+    "Faculty, mentors, and associate instructors at Jnana Diksuchika.",
 };
 
 export default function TeamLayout({

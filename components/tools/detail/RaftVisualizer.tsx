@@ -167,7 +167,7 @@ export function RaftVisualizer() {
 
   const exportState = () => {
     const state = {
-      cluster: "Big Switch Raft Engine v2.4",
+      cluster: "Jnana Diksuchika Raft Engine v2.4",
       term,
       leader: isLeaderAlive ? "Node C" : null,
       commitIndex: logIndex,

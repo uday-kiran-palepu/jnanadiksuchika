@@ -3,9 +3,9 @@ import { HomePageContent } from "@/components/home/HomePageContent";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Big Switch",
+  title: "Jnana Diksuchika",
   description:
-    "Big Switch — learning tracks, knowledge marketplace, workshops, and professional services that flip engineers from theory to production.",
+    "Jnana Diksuchika — learning tracks, knowledge marketplace, workshops, and professional services that guide engineers from theory to production.",
   path: "/",
 });
 

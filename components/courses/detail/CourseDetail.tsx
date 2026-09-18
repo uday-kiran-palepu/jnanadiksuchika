@@ -46,7 +46,7 @@ export function CourseDetail({ course }: Props) {
                   {course.levelBadge}
                 </span>
                 <span className="px-space-sm py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md uppercase tracking-wider">
-                  Big Switch · Course
+                  Jnana Diksuchika · Course
                 </span>
               </div>
               <h1 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background tracking-tight leading-tight">

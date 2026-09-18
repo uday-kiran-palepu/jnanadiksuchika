@@ -7,7 +7,7 @@ import { testimonials } from "@/lib/data/site";
 export function TestimonialsSection() {
   return (
     <Section
-      title="Engineers who flipped the switch"
+      title="Engineers who found their direction"
       subtitle="Peers talking about labs, cohorts, and bilingual knowledge — not marketing copy."
       className="bg-[var(--bs-surface-0)]"
     >

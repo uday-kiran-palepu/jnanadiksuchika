@@ -1,7 +1,8 @@
-# Big Switch — Pre-Enhancement Audit
+# Jnana Diksuchika — Pre-Enhancement Audit
 
 **Date:** 2026-09-18  
-**Source brand:** Jnana Diksuchika → target **Big Switch**  
+**Brand:** Jnana Diksuchika (జ్ఞాన దిక్సూచిక)  
+**Note:** Earlier enhancement briefly targeted a “Big Switch” rename; product name restored to Jnana Diksuchika while keeping feature work.  
 **Stack:** Next.js 14.2 App Router, TypeScript, Tailwind (M3-style tokens), framer-motion, three.js, lucide-react
 
 ## Routes (`app/**/page.tsx`)
@@ -19,7 +20,7 @@
 | `/terms`, `/privacy` | OK | Legal copy with JD name |
 | `not-found` | OK | Present |
 
-**Missing for Big Switch IA:** `/services` (+ detail slugs), `/account/login`, `/account/profile`, SEO `sitemap.ts` / `robots.ts`, centralized `/locales`.
+**Missing for Jnana Diksuchika IA:** `/services` (+ detail slugs), `/account/login`, `/account/profile`, SEO `sitemap.ts` / `robots.ts`, centralized `/locales`.
 
 ## Components & architecture
 
@@ -46,7 +47,7 @@
 ## Phase priorities (this enhancement)
 
 1. Fix/stabilize build & routing baseline  
-2. Big Switch nav + centralized EN/te locales  
+2. Jnana Diksuchika nav + centralized EN/te locales  
 3. Design system tokens + Button/Card/Section  
 4. Homepage rewrite (pillars, KB, services, FAQ, 3D lazy)  
 5. Services + Account shells + KB plans UI  
@@ -60,7 +61,7 @@ Raft visualizer, contact form states, system-states, terms/privacy structure, wo
 ## Post-enhancement status (2026-09-18)
 
 - [x] Audit written  
-- [x] Big Switch nav + EN/te JSON i18n (`bs-locale`)  
+- [x] Jnana Diksuchika nav + EN/te JSON i18n (`jd-locale`)  
 - [x] Design tokens + Button/Card/Section  
 - [x] Homepage rewrite + lazy 3D compass  
 - [x] Services listing + 7 detail routes  

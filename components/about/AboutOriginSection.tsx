@@ -50,7 +50,7 @@ export function AboutOriginSection() {
                 production environments.
               </p>
               <p>
-                Big Switch was founded as a quiet, uncompromising sanctuary. An
+                Jnana Diksuchika was founded as a quiet, uncompromising sanctuary. An
                 institute where practicing principal engineers teach what actually runs the
                 modern internet. Where foundational intuition is first unlocked in the
                 intuitive, expressive cadence of Telugu (

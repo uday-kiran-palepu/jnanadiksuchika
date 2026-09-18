@@ -3,7 +3,7 @@ import { ProfileShell } from "@/components/account/ProfileShell";
 
 export const metadata = buildMetadata({
   title: "Profile",
-  description: "Big Switch profile shell — auth-backed profile coming soon.",
+  description: "Jnana Diksuchika profile shell — auth-backed profile coming soon.",
   path: "/account/profile",
   noIndex: true,
 });

@@ -1,4 +1,4 @@
-/** Central mock/catalog data surface for Big Switch. */
+/** Central mock/catalog data surface for Jnana Diksuchika. */
 export * from "@/lib/data/services";
 export * from "@/lib/data/site";
 

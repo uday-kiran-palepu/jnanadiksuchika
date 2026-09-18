@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Knowledge Base",
   description:
-    "Big Switch knowledge marketplace — free guides, ₹1/₹10 unlocks, and subscription plans. Payment checkout wiring is future work.",
+    "Jnana Diksuchika knowledge marketplace — free guides, ₹1/₹10 unlocks, and subscription plans. Payment checkout wiring is future work.",
   path: "/knowledge-base",
 });
 
