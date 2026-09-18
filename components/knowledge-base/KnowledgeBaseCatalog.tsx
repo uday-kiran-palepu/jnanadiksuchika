@@ -200,17 +200,13 @@ export function KnowledgeBaseCatalog() {
                       <span className="material-symbols-outlined text-primary text-[18px]">{article.authorIcon}</span>
                       {article.authorMeta}
                     </span>
-                    {article.slug ? (
-                      <Link
-                        className="font-title-md text-title-md text-primary font-semibold flex items-center gap-space-xs hover:translate-x-0.5 transition-transform"
-                        href={`/knowledge-base/${article.slug}`}
-                      >
-                        Read Article
-                        <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                      </Link>
-                    ) : (
-                      <span className="font-title-md text-title-md text-on-surface-variant">Coming soon</span>
-                    )}
+                    <Link
+                      className="font-title-md text-title-md text-primary font-semibold flex items-center gap-space-xs hover:translate-x-0.5 transition-transform"
+                      href={`/knowledge-base/${article.slug}`}
+                    >
+                      Read Article
+                      <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </Link>
                   </div>
                 </article>
               ))}

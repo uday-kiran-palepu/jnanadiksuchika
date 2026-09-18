@@ -17,7 +17,10 @@ function CoreTeamCard({
   member: (typeof coreTeamMembers)[number];
 }) {
   return (
-    <div className="group flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300">
+    <Link
+      href={`/team/${member.slug}`}
+      className="group flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300"
+    >
       <div className="relative h-72 w-full overflow-hidden bg-surface-container">
         {/* TODO: replace with real faculty photo */}
         <ImagePlaceholder
@@ -87,7 +90,7 @@ function CoreTeamCard({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -370,15 +373,15 @@ export default function TeamPage() {
                     </span>
                     {mentor.nextSession}
                   </span>
-                  <a
+                  <Link
                     className="text-primary hover:text-primary-container font-semibold inline-flex items-center gap-0.5"
-                    href="/contact"
+                    href={`/team/${mentor.slug}`}
                   >
                     Profile{" "}
                     <span className="material-symbols-outlined text-[14px]">
                       arrow_forward
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

@@ -5,6 +5,7 @@ import { catalogCourses } from "@/components/courses/data";
 import { workshopCohorts } from "@/components/workshops/data";
 import { kbArticleSlugs } from "@/components/knowledge-base/data";
 import { toolSlugs } from "@/components/tools/data";
+import { teamSlugs } from "@/components/team/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -68,6 +69,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,
+    });
+  }
+  for (const slug of teamSlugs) {
+    entries.push({
+      url: `${SITE_URL}/team/${slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.4,
     });
   }
 

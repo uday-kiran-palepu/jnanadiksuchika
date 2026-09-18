@@ -7,11 +7,11 @@ export type TrackFilterId =
   | "riscv";
 
 export const trackFilters: { id: TrackFilterId; label: string }[] = [
-  { id: "all", label: "All Tracks (14)" },
-  { id: "distributed", label: "Distributed Systems (5)" },
-  { id: "kernel", label: "Linux & Kernel Internals (3)" },
-  { id: "cloud", label: "Cloud, K8s & SRE (3)" },
-  { id: "wasm", label: "WebAssembly & High-Perf UI (2)" },
+  { id: "all", label: "All Tracks (4)" },
+  { id: "distributed", label: "Distributed Systems (2)" },
+  { id: "kernel", label: "Linux & Kernel Internals (1)" },
+  { id: "cloud", label: "Cloud, K8s & SRE (0)" },
+  { id: "wasm", label: "WebAssembly & High-Perf UI (0)" },
   { id: "riscv", label: "Embedded & RISC-V (1)" },
 ];
 

@@ -29,19 +29,13 @@ export function KbPreviewSection() {
             <p className="mt-2 text-sm text-[var(--bs-muted)] line-clamp-3">
               {article.excerpt}
             </p>
-            {article.slug ? (
-              <Link
+            <Link
                 href={`/knowledge-base/${article.slug}`}
                 className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[var(--bs-accent)]"
               >
                 {t("common.learnMore")}
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
-            ) : (
-              <span className="mt-4 inline-block text-xs font-semibold text-[var(--bs-muted)]">
-                {t("common.comingSoon")}
-              </span>
-            )}
           </Card>
         ))}
       </div>

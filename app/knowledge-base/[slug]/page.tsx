@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { RAFT_GUIDE_SLUG, kbArticleSlugs, kbArticles } from "@/components/knowledge-base/data";
+import {
+  RAFT_GUIDE_SLUG,
+  getKbArticle,
+  kbArticleSlugs,
+  kbArticles,
+} from "@/components/knowledge-base/data";
 import { RaftVisualizerGuide } from "@/components/knowledge-base/detail/RaftVisualizerGuide";
+import { ArticleDetail } from "@/components/knowledge-base/detail/ArticleDetail";
 
 export function generateStaticParams() {
   return kbArticleSlugs.map((slug) => ({ slug }));
@@ -30,5 +36,11 @@ export default function KnowledgeBaseArticlePage({ params }: KnowledgeBaseArticl
   if (params.slug === RAFT_GUIDE_SLUG) {
     return <RaftVisualizerGuide />;
   }
-  notFound();
+
+  const article = getKbArticle(params.slug);
+  if (!article) {
+    notFound();
+  }
+
+  return <ArticleDetail article={article} />;
 }

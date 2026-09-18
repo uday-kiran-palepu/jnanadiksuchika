@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Cohort04Detail } from "@/components/workshops/detail/Cohort04Detail";
+import { WorkshopDetail } from "@/components/workshops/detail/WorkshopDetail";
+import { getWorkshopDetail } from "@/components/workshops/detail/workshopDetails";
 import { workshopCohorts } from "@/components/workshops/data";
 
 const COHORT_04_SLUG = "systems-programming-distributed-storage";
@@ -38,17 +40,10 @@ export default function WorkshopDetailPage({ params }: WorkshopDetailPageProps) 
     return <Cohort04Detail />;
   }
 
-  return (
-    <div className="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin py-space-xl">
-      <h1 className="font-headline-md text-headline-md text-on-surface">
-        {cohort.title}
-      </h1>
-      <p className="font-body-md text-body-md text-on-surface-variant mt-space-md">
-        Full syllabus page coming soon.{" "}
-        <a className="text-primary font-semibold hover:underline" href="/workshops">
-          Back to workshops
-        </a>
-      </p>
-    </div>
-  );
+  const detail = getWorkshopDetail(params.slug);
+  if (!detail) {
+    notFound();
+  }
+
+  return <WorkshopDetail cohort={detail} />;
 }

@@ -19,13 +19,13 @@ export const categoryPills: {
   label: string;
   count: number;
 }[] = [
-  { id: "all", label: "All Courses", count: 28 },
-  { id: "technical", label: "Technical", count: 11 },
-  { id: "ai", label: "AI & Productivity", count: 5 },
-  { id: "cloud", label: "Cloud & Infrastructure", count: 4 },
-  { id: "design", label: "Design & UX Systems", count: 3 },
-  { id: "leadership", label: "Professional & Leadership", count: 2 },
-  { id: "aptitude", label: "Aptitude & Reasoning", count: 2 },
+  { id: "all", label: "All Courses", count: 6 },
+  { id: "technical", label: "Technical", count: 3 },
+  { id: "ai", label: "AI & Productivity", count: 1 },
+  { id: "cloud", label: "Cloud & Infrastructure", count: 0 },
+  { id: "design", label: "Design & UX Systems", count: 1 },
+  { id: "leadership", label: "Professional & Leadership", count: 0 },
+  { id: "aptitude", label: "Aptitude & Reasoning", count: 0 },
   { id: "gate", label: "Competitive Exams & GATE CS", count: 1 },
 ];
 
@@ -195,4 +195,4 @@ export const catalogCourses: CatalogCourse[] = [
   },
 ];
 
-export const TOTAL_CATALOG_COUNT = 28;
+export const TOTAL_CATALOG_COUNT = 6;

@@ -4,6 +4,7 @@ import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 const faculty = [
   {
     name: "Dr. S. K. Murthy",
+    slug: "dr-s-k-murthy",
     role: "Lead Systems Architect",
     meta: "ex-ISRO Satellite Control • 24 yrs exp",
     roleColor: "text-primary",
@@ -13,6 +14,7 @@ const faculty = [
   },
   {
     name: "Venkatesh Rao",
+    slug: "venkatesh-rao",
     role: "Fellow & Principal Infra Engineer",
     meta: "BGP Networks • Telugu Pedagogy Lead",
     roleColor: "text-secondary",
@@ -22,6 +24,7 @@ const faculty = [
   },
   {
     name: "Priya Ramaswamy",
+    slug: "priya-ramaswamy",
     role: "Senior Staff SRE & Chaos Lead",
     meta: "Global FinTech Core • eBPF Testbenches",
     roleColor: "text-tertiary",
@@ -60,8 +63,9 @@ export function TeamTeaserSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
           {faculty.map((person) => (
-            <div
+            <Link
               key={person.name}
+              href={`/team/${person.slug}`}
               className="flex flex-col p-space-lg rounded-xl bg-surface-container-low shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex items-center gap-space-md mb-space-md">
@@ -106,32 +110,12 @@ export function TeamTeaserSection() {
                   </span>
                   Verified Mentor
                 </span>
-                <div className="flex items-center gap-space-xs">
-                  <a
-                    aria-label="GitHub Profile"
-                    className="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
-                    href="https://github.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="material-symbols-outlined text-[18px]">
-                      code
-                    </span>
-                  </a>
-                  <a
-                    aria-label="LinkedIn Profile"
-                    className="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="material-symbols-outlined text-[18px]">
-                      hub
-                    </span>
-                  </a>
-                </div>
+                <span className="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-semibold">
+                  View profile
+                  <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

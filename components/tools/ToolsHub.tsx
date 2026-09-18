@@ -9,6 +9,11 @@ import { RaftClusterMiniSvg } from "./RaftClusterMiniSvg";
 import { pick, useLocale } from "@/lib/i18n/LanguageProvider";
 import { RAFT_VISUALIZER_SLUG } from "./data";
 
+function toolHref(id: string) {
+  const tool = hubTools.find((t) => t.id === id);
+  return tool ? `/tools/${tool.slug}` : "/tools";
+}
+
 const activePill =
   "px-space-md py-space-xs rounded-lg font-title-md text-title-md bg-primary-container text-on-primary-container shadow-sm transition-all flex items-center gap-space-xs";
 const inactivePill =
@@ -340,10 +345,13 @@ function EbpfCard() {
           <span className="font-caption text-caption text-on-surface-variant">
             eBPF Verifier AST
           </span>
-          <span className="inline-flex items-center gap-space-xs font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">
+          <Link
+            href={toolHref("ebpf")}
+            className="inline-flex items-center gap-space-xs font-title-md text-title-md text-primary group-hover:text-secondary transition-colors"
+          >
             Open Scratchpad
             <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </span>
+          </Link>
         </>
       }
     >
@@ -388,10 +396,13 @@ function SubnetCard() {
           <span className="font-caption text-caption text-on-surface-variant">
             RFC 1918 / RFC 4632
           </span>
-          <span className="inline-flex items-center gap-space-xs font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">
+          <Link
+            href={toolHref("subnet")}
+            className="inline-flex items-center gap-space-xs font-title-md text-title-md text-primary group-hover:text-secondary transition-colors"
+          >
             Calculate Subnet
             <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </span>
+          </Link>
         </>
       }
     >
@@ -421,10 +432,13 @@ function LsmCard() {
           <span className="font-caption text-caption text-on-surface-variant">
             Calculates IOPS Budget
           </span>
-          <span className="inline-flex items-center gap-space-xs font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">
+          <Link
+            href={toolHref("lsm")}
+            className="inline-flex items-center gap-space-xs font-title-md text-title-md text-primary group-hover:text-secondary transition-colors"
+          >
             Run Analysis
             <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </span>
+          </Link>
         </>
       }
     >
@@ -471,10 +485,13 @@ function IeeeCard() {
           <span className="font-caption text-caption text-on-surface-variant">
             Denormal &amp; NaN Detector
           </span>
-          <span className="inline-flex items-center gap-space-xs font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">
+          <Link
+            href={toolHref("ieee754")}
+            className="inline-flex items-center gap-space-xs font-title-md text-title-md text-primary group-hover:text-secondary transition-colors"
+          >
             Inspect Bits
             <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </span>
+          </Link>
         </>
       }
     >
@@ -516,13 +533,13 @@ function AmdahlCard() {
         <span className="font-caption text-caption text-on-surface-variant">
           Instruction Pipeline Hazards
         </span>
-        <button
+        <Link
+          href={toolHref("amdahl")}
           className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-title-md text-title-md hover:bg-primary-container transition-all"
-          type="button"
         >
           Model Speedup
           <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-        </button>
+        </Link>
       </div>
     </div>
   );
@@ -565,7 +582,7 @@ function GlossaryCard() {
         </span>
         <Link
           className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-secondary-container text-on-tertiary font-title-md text-title-md hover:bg-secondary transition-all"
-          href="/knowledge-base"
+          href={toolHref("glossary")}
         >
           Search Glossary
           <span className="material-symbols-outlined text-[18px]">search</span>
@@ -604,13 +621,13 @@ function ProtobufCard() {
             -68.4%
           </span>
         </div>
-        <button
+        <Link
+          href={toolHref("protobuf")}
           className="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-primary text-on-primary font-title-md text-title-md hover:bg-primary-container transition-all"
-          type="button"
         >
           Profile Payload
           <span className="material-symbols-outlined text-[18px]">bolt</span>
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -35,6 +35,8 @@ export {
   coreTeamMembers,
   associateMentors,
   domainFilters,
+  teamSlugs,
+  getTeamMember,
 } from "@/components/team/data";
 export type {
   CoreTeamMember,

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { catalogCourses } from "@/components/courses/data";
 import { GoRaftCourseDetail } from "@/components/courses/detail/go-raft/GoRaftCourseDetail";
+import { CourseDetail } from "@/components/courses/detail/CourseDetail";
+import { getCourseDetail } from "@/components/courses/detail/courseDetails";
 
 const GO_RAFT_SLUG = "distributed-systems-go-raft";
 
@@ -39,17 +40,10 @@ export default function CourseDetailPage({ params }: CourseDetailPageProps) {
     return <GoRaftCourseDetail />;
   }
 
-  return (
-    <div className="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin py-space-xl">
-      <h1 className="font-headline-md text-headline-md text-on-surface">
-        {course.title}
-      </h1>
-      <p className="font-body-md text-body-md text-on-surface-variant mt-space-md">
-        Full syllabus page coming soon.{" "}
-        <Link className="text-primary font-semibold hover:underline" href="/courses">
-          Back to courses
-        </Link>
-      </p>
-    </div>
-  );
+  const detail = getCourseDetail(params.slug);
+  if (!detail) {
+    notFound();
+  }
+
+  return <CourseDetail course={detail} />;
 }
