@@ -56,3 +56,18 @@
 ## Preserve
 
 Raft visualizer, contact form states, system-states, terms/privacy structure, workshops/courses tooling under Learning.
+
+## Post-enhancement status (2026-09-18)
+
+- [x] Audit written  
+- [x] Big Switch nav + EN/te JSON i18n (`bs-locale`)  
+- [x] Design tokens + Button/Card/Section  
+- [x] Homepage rewrite + lazy 3D compass  
+- [x] Services listing + 7 detail routes  
+- [x] Account login/profile shells (no fake auth)  
+- [x] KB plans UI (payment integration comments only)  
+- [x] sitemap.ts / robots.ts / metadata helpers  
+- [x] `rm -rf .next && npm run build` green (39 routes)  
+- [x] Route curl QA: all key paths 200 (404 for unknown)  
+- [x] Dev: `npm run dev:clean` on **43123**  
+
